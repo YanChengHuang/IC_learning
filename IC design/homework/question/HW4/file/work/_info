@@ -1,0 +1,58 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Tuco/Desktop/IC design/homework/question/HW3/file
+vATCONV
+Z0 !s110 1684488839
+!i10b 1
+!s100 UWiS0V_zV8af@a0gO?HKM2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I457_5A0I83JRA?@@Y>o003
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Tuco/Desktop/IC design/homework/question/HW4/file
+w1684488761
+8C:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/ATCONV.v
+FC:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/ATCONV.v
+!i122 77
+L0 2 352
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1684488839.000000
+!s107 C:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/ATCONV.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/ATCONV.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@t@c@o@n@v
+vtestfixture
+R0
+!i10b 1
+!s100 XRZ;UL8^K^Hz^_W`gg>Wi1
+R1
+I>60AIoP1Y0CQ9?HXPa_542
+R2
+R3
+w1684325845
+8C:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/testfixture.v
+FC:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/testfixture.v
+!i122 78
+L0 8 173
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/testfixture.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Tuco/Desktop/IC design/homework/question/HW4/file/testfixture.v|
+!i113 1
+R6
+R7

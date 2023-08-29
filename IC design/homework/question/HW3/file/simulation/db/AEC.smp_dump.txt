@@ -1,0 +1,10 @@
+
+State Machine - |AEC|state_reg
+Name state_reg.FINISH state_reg.CAL state_reg.MERGE state_reg.POP state_reg.PUSH state_reg.IDLE state_reg.FETCH 
+state_reg.FETCH 0 0 0 0 0 0 0 
+state_reg.IDLE 0 0 0 0 0 1 1 
+state_reg.PUSH 0 0 0 0 1 0 1 
+state_reg.POP 0 0 0 1 0 0 1 
+state_reg.MERGE 0 0 1 0 0 0 1 
+state_reg.CAL 0 1 0 0 0 0 1 
+state_reg.FINISH 1 0 0 0 0 0 1 

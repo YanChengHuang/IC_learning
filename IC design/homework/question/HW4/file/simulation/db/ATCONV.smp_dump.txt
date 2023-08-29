@@ -1,0 +1,13 @@
+
+State Machine - |ATCONV|state_reg
+Name state_reg.FINISH state_reg.STORE_1 state_reg.FIND_MAX state_reg.FETCH_0 state_reg.SET_FETCH_0 state_reg.STORE_0 state_reg.CAL state_reg.FETCH_KERNEL_IDX state_reg.FETCH_FAKE state_reg.SET_FETCH 
+state_reg.SET_FETCH 0 0 0 0 0 0 0 0 0 0 
+state_reg.FETCH_FAKE 0 0 0 0 0 0 0 0 1 1 
+state_reg.FETCH_KERNEL_IDX 0 0 0 0 0 0 0 1 0 1 
+state_reg.CAL 0 0 0 0 0 0 1 0 0 1 
+state_reg.STORE_0 0 0 0 0 0 1 0 0 0 1 
+state_reg.SET_FETCH_0 0 0 0 0 1 0 0 0 0 1 
+state_reg.FETCH_0 0 0 0 1 0 0 0 0 0 1 
+state_reg.FIND_MAX 0 0 1 0 0 0 0 0 0 1 
+state_reg.STORE_1 0 1 0 0 0 0 0 0 0 1 
+state_reg.FINISH 1 0 0 0 0 0 0 0 0 1 
