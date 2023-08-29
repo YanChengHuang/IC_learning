@@ -1,0 +1,16 @@
+{C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/testfixture.v} {1 {vlog -work hw5_simulation -stats=none {C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/testfixture.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testfixture
+
+Top level modules:
+	testfixture
+
+} {} {}} {C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/demosaic.vo} {1 {vlog -work hw5_simulation -stats=none {C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/demosaic.vo}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module demosaic
+-- Compiling module hard_block
+
+Top level modules:
+	demosaic
+
+} {} {}}

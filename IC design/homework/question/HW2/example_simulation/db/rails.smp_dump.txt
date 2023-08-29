@@ -1,0 +1,9 @@
+
+State Machine - |rails|state
+Name state.WAIT state.OUT state.STATION_PUSH state.STATION_POP state.DATA_IN state.NUMBER_IN 
+state.NUMBER_IN 0 0 0 0 0 0 
+state.DATA_IN 0 0 0 0 1 1 
+state.STATION_POP 0 0 0 1 0 1 
+state.STATION_PUSH 0 0 1 0 0 1 
+state.OUT 0 1 0 0 0 1 
+state.WAIT 1 0 0 0 0 1 

@@ -1,0 +1,7 @@
+
+State Machine - |demosaic|state_reg
+Name state_reg.FINISH state_reg.STORE_DE state_reg.DEMOSAIC state_reg.STORE 
+state_reg.STORE 0 0 0 0 
+state_reg.DEMOSAIC 0 0 1 1 
+state_reg.STORE_DE 0 1 0 1 
+state_reg.FINISH 1 0 0 1 

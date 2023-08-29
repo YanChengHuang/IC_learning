@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Tuco/Desktop/IC design/homework/question/HW5/file
+vdemosaic
+Z1 !s110 1686303932
+!i10b 1
+!s100 AFAi8QblG[1KH1lEUmCZb3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IF7PG_=RFZaM_NJmRGam[@0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1686303526
+Z5 8C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/demosaic.vo
+Z6 FC:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/demosaic.vo
+!i122 2
+L0 32 11178
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1686303932.000000
+Z9 !s107 C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/demosaic.vo|
+Z10 !s90 -reportprogress|300|-work|hw5_simulation|-stats=none|C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/demosaic.vo|
+!i113 1
+Z11 o-work hw5_simulation
+Z12 tCvgOpt 0
+vhard_block
+R1
+!i10b 1
+!s100 c>^@4k>Ij5AooJC3A?c:I0
+R2
+IJIRo5G>Dlb1=2c;j<K[:d3
+R3
+R0
+R4
+R5
+R6
+!i122 2
+L0 11211 34
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vtestfixture
+R1
+!i10b 1
+!s100 TLlC?LbBj;1WQG0?BDH8N2
+R2
+IUekHJ>_8d=]zlJHYYYQdc2
+R3
+R0
+w1686206135
+8C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/testfixture.v
+FC:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/testfixture.v
+!i122 3
+L0 8 142
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/testfixture.v|
+!s90 -reportprogress|300|-work|hw5_simulation|-stats=none|C:/Users/Tuco/Desktop/IC design/homework/question/HW5/file/testfixture.v|
+!i113 1
+R11
+R12
