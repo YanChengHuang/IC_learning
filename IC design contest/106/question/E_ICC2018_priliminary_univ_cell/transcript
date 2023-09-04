@@ -1,0 +1,332 @@
+# Compile of LCD_CTRL.vo was successful.
+# Compile of testfixture.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp {/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo}
+# vsim -gui work.test -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp "/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo" 
+# Start time: 20:15:47 on Sep 04,2023
+# Loading work.test
+# Loading work.LCD_CTRL
+# Loading work.hard_block
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_obuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_ibuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_clkctrl
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_mux41
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_ena_reg
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_lcell_comb
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.dffeas
+# Loading work.IROM
+# Loading work.IRAM
+# Loading instances from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading instances from LCD_CTRL_v.sdo
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.PRIM_GDFF_LOW
+# ** Warning: Design size of 11351 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading timing data from LCD_CTRL_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /test File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
+add wave -position insertpoint sim:/test/LCD_CTRL/*
+run -all
+# All data have been generated successfully!
+# 
+# -------------------PASS-------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v(148)
+#    Time: 8131788 ps  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v line 148
+quit -sim
+# End time: 20:16:35 on Sep 04,2023, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 3
+# Compile of testfixture.v was successful.
+vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp {/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo} work.test
+# vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp "/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo" work.test 
+# Start time: 20:16:47 on Sep 04,2023
+# Loading work.test
+# Loading work.LCD_CTRL
+# Loading work.hard_block
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_obuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_ibuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_clkctrl
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_mux41
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_ena_reg
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_lcell_comb
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.dffeas
+# Loading work.IROM
+# Loading work.IRAM
+# Loading instances from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading instances from LCD_CTRL_v.sdo
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.PRIM_GDFF_LOW
+# ** Warning: Design size of 11351 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading timing data from LCD_CTRL_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /test File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
+add wave -position insertpoint sim:/test/LCD_CTRL/*
+run -all
+# All data have been generated successfully!
+# 
+# -------------------PASS-------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v(148)
+#    Time: 5426788 ps  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v line 148
+quit -sim
+# End time: 20:17:25 on Sep 04,2023, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 3
+# Compile of testfixture.v was successful.
+vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp {/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo} work.test
+# vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp "/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo" work.test 
+# Start time: 20:17:37 on Sep 04,2023
+# Loading work.test
+# Loading work.LCD_CTRL
+# Loading work.hard_block
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_obuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_ibuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_clkctrl
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_mux41
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_ena_reg
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_lcell_comb
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.dffeas
+# Loading work.IROM
+# Loading work.IRAM
+# Loading instances from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading instances from LCD_CTRL_v.sdo
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.PRIM_GDFF_LOW
+# ** Warning: Design size of 11351 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading timing data from LCD_CTRL_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /test File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
+add wave -position insertpoint sim:/test/LCD_CTRL/*
+run -all
+# ** Error: $hold( posedge clk &&& nosloadsclr:757878 ps, d:758033 ps, 189 ps );
+#    Time: 758033 ps  Iteration: 0  Process: /test/LCD_CTRL/\buffer[29][2] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:757888 ps, d:758058 ps, 189 ps );
+#    Time: 758058 ps  Iteration: 0  Process: /test/LCD_CTRL/\buffer[29][1] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& reset:758316 ps, ena:758398 ps, 189 ps );
+#    Time: 758398 ps  Iteration: 1  Process: /test/LCD_CTRL/\buffer[28][5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 295
+# ** Error: $hold( posedge clk &&& nosloadsclr:798330 ps, d:798365 ps, 189 ps );
+#    Time: 798365 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[1] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:837897 ps, d:838065 ps, 189 ps );
+#    Time: 838065 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:917897 ps, d:918065 ps, 189 ps );
+#    Time: 918065 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:997897 ps, d:998065 ps, 189 ps );
+#    Time: 998065 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:1037897 ps, d:1038065 ps, 189 ps );
+#    Time: 1038065 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:1077897 ps, d:1078065 ps, 189 ps );
+#    Time: 1078065 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ** Error: $hold( posedge clk &&& nosloadsclr:1517897 ps, d:1518065 ps, 189 ps );
+#    Time: 1518065 ps  Iteration: 0  Process: /test/LCD_CTRL/\idx[5] /#Setuphold# File: $MODEL_TECH/../altera/verilog/src/altera_primitives.v Line: 291
+# ERROR at           0:output 00 !=expect cd 
+# ERROR at           1:output cd !=expect 12 
+# ERROR at           2:output 12 !=expect f3 
+# ERROR at           3:output f3 !=expect 33 
+# ERROR at           4:output 33 !=expect 87 
+# ERROR at           5:output 87 !=expect 3a 
+# ERROR at           6:output 24 !=expect 7a 
+# ERROR at           7:output 7a !=expect 59 
+# ERROR at           8:output 59 !=expect 80 
+# ERROR at           9:output 80 !=expect 41 
+# ERROR at          10:output 41 !=expect 36 
+# ERROR at          11:output 36 !=expect 71 
+# ERROR at          12:output 71 !=expect 24 
+# ERROR at          13:output bf !=expect ff 
+# ERROR at          14:output ae !=expect ff 
+# ERROR at          15:output ff !=expect 66 
+# ERROR at          16:output 66 !=expect 49 
+# ERROR at          17:output 49 !=expect 27 
+# ERROR at          18:output 27 !=expect 98 
+# ERROR at          19:output 94 !=expect 98 
+# ERROR at          21:output 3a !=expect ff 
+# ERROR at          22:output b8 !=expect ff 
+# ERROR at          23:output 69 !=expect 61 
+# ERROR at          24:output d2 !=expect 38 
+# ERROR at          25:output a7 !=expect 38 
+# ERROR at          26:output 3b !=expect 38 
+# ERROR at          27:output 30 !=expect 00 
+# ERROR at          28:output 98 !=expect bf 
+# ERROR at          29:output 10 !=expect b8 
+# ERROR at          30:output 83 !=expect 25 
+# ERROR at          31:output da !=expect 61 
+# ERROR at          32:output 20 !=expect 22 
+# ERROR at          33:output 22 !=expect a6 
+# ERROR at          34:output 38 !=expect a6 
+# ERROR at          35:output c6 !=expect 98 
+# ERROR at          36:output 00 !=expect 26 
+# ERROR at          37:output 82 !=expect 25 
+# ERROR at          38:output 25 !=expect 20 
+# ERROR at          39:output 68 !=expect 25 
+# ERROR at          40:output 25 !=expect 0a 
+# ERROR at          41:output d7 !=expect a6 
+# ERROR at          42:output 0a !=expect a6 
+# ERROR at          43:output e3 !=expect 41 
+# ERROR at          44:output 41 !=expect 25 
+# ERROR at          45:output 25 !=expect e1 
+# ERROR at          46:output a1 !=expect 37 
+# ERROR at          47:output 37 !=expect 80 
+# ERROR at          48:output 80 !=expect 87 
+# ERROR at          49:output 87 !=expect 37 
+# ERROR at          52:output 77 !=expect 28 
+# ERROR at          53:output 28 !=expect ec 
+# ERROR at          54:output ec !=expect 56 
+# ERROR at          55:output 56 !=expect 47 
+# ERROR at          56:output 47 !=expect 5a 
+# ERROR at          57:output 5a !=expect c1 
+# ERROR at          58:output 37 !=expect 77 
+# ERROR at          59:output c1 !=expect 04 
+# ERROR at          60:output 04 !=expect 13 
+# ERROR at          61:output 13 !=expect 66 
+# ERROR at          62:output 26 !=expect ff 
+# ERROR at          63:output ff !=expect c0 
+# There are          61 errors!
+# 
+# ---------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v(154)
+#    Time: 2251788 ps  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v line 154
+quit -sim
+# End time: 20:18:29 on Sep 04,2023, Elapsed time: 0:00:52
+# Errors: 10, Warnings: 3
+# Compile of testfixture.v was successful.
+vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp {/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo} work.test
+# vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp "/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo" work.test 
+# Start time: 20:18:41 on Sep 04,2023
+# Loading work.test
+# Loading work.LCD_CTRL
+# Loading work.hard_block
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_obuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_ibuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_clkctrl
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_mux41
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_ena_reg
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_lcell_comb
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.dffeas
+# Loading work.IROM
+# Loading work.IRAM
+# Loading instances from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading instances from LCD_CTRL_v.sdo
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.PRIM_GDFF_LOW
+# ** Warning: Design size of 11351 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading timing data from LCD_CTRL_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /test File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
+add wave -position insertpoint sim:/test/LCD_CTRL/*
+run -all
+# ERROR at           0:output c1 !=expect cd 
+# ERROR at           1:output 2d !=expect 12 
+# ERROR at           3:output 13 !=expect 33 
+# ERROR at           4:output 75 !=expect 87 
+# ERROR at           5:output 3b !=expect 3a 
+# ERROR at           6:output 7b !=expect 7a 
+# ERROR at           7:output 28 !=expect 59 
+# ERROR at           8:output 81 !=expect 80 
+# ERROR at           9:output 51 !=expect 41 
+# ERROR at          10:output 37 !=expect 36 
+# ERROR at          11:output 45 !=expect 71 
+# ERROR at          12:output bf !=expect 24 
+# ERROR at          13:output 8f !=expect ff 
+# ERROR at          14:output f7 !=expect ff 
+# ERROR at          15:output bf !=expect 66 
+# ERROR at          17:output 6b !=expect 27 
+# ERROR at          18:output 94 !=expect 98 
+# ERROR at          20:output bf !=expect 79 
+# ERROR at          21:output 9d !=expect ff 
+# ERROR at          22:output 50 !=expect ff 
+# ERROR at          23:output b7 !=expect 61 
+# ERROR at          24:output 22 !=expect 38 
+# ERROR at          25:output 22 !=expect 38 
+# ERROR at          26:output c3 !=expect 38 
+# ERROR at          27:output 26 !=expect 00 
+# ERROR at          28:output 3a !=expect bf 
+# ERROR at          29:output 79 !=expect b8 
+# ERROR at          30:output f3 !=expect 25 
+# ERROR at          31:output 14 !=expect 61 
+# ERROR at          32:output 48 !=expect 22 
+# ERROR at          33:output c8 !=expect a6 
+# ERROR at          34:output 90 !=expect a6 
+# ERROR at          35:output 48 !=expect 98 
+# ERROR at          36:output 18 !=expect 26 
+# ERROR at          37:output 08 !=expect 25 
+# ERROR at          38:output 65 !=expect 20 
+# ERROR at          39:output da !=expect 25 
+# ERROR at          40:output 48 !=expect 0a 
+# ERROR at          41:output db !=expect a6 
+# ERROR at          42:output e3 !=expect a6 
+# ERROR at          44:output 21 !=expect 25 
+# ERROR at          45:output 45 !=expect e1 
+# ERROR at          46:output 33 !=expect 37 
+# ERROR at          47:output e5 !=expect 80 
+# ERROR at          48:output 57 !=expect 87 
+# ERROR at          49:output 88 !=expect 37 
+# ERROR at          50:output 95 !=expect 94 
+# ERROR at          51:output 87 !=expect af 
+# ERROR at          52:output 2c !=expect 28 
+# ERROR at          53:output 7b !=expect ec 
+# ERROR at          54:output 57 !=expect 56 
+# ERROR at          55:output e4 !=expect 47 
+# ERROR at          56:output 3f !=expect 5a 
+# ERROR at          57:output 47 !=expect c1 
+# ERROR at          58:output c5 !=expect 77 
+# ERROR at          59:output a3 !=expect 04 
+# ERROR at          60:output 17 !=expect 13 
+# ERROR at          61:output 01 !=expect 66 
+# ERROR at          62:output 50 !=expect ff 
+# ERROR at          63:output 6f !=expect c0 
+# There are          60 errors!
+# 
+# ---------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v(154)
+#    Time: 4074288 ps  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v line 154
+quit -sim
+# End time: 20:19:23 on Sep 04,2023, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 3
+# Compile of testfixture.v was successful.
+vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp {/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo} work.test
+# vsim -gui -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera -L C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive -sdftyp "/LCD_CTRL=C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo" work.test 
+# Start time: 20:19:40 on Sep 04,2023
+# Loading work.test
+# Loading work.LCD_CTRL
+# Loading work.hard_block
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_obuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_io_ibuf
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_clkctrl
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_mux41
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_ena_reg
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive.cycloneive_lcell_comb
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.dffeas
+# Loading work.IROM
+# Loading work.IRAM
+# Loading instances from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading instances from LCD_CTRL_v.sdo
+# Loading C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera.PRIM_GDFF_LOW
+# ** Warning: Design size of 11351 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL_v.sdo
+# Loading timing data from LCD_CTRL_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /test File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
+add wave -position insertpoint sim:/test/LCD_CTRL/*
+run -all
+# All data have been generated successfully!
+# 
+# -------------------PASS-------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v(148)
+#    Time: 5426788 ps  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v line 148
+# End time: 20:23:13 on Sep 04,2023, Elapsed time: 0:03:33
+# Errors: 0, Warnings: 3

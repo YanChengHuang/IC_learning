@@ -1,0 +1,7 @@
+
+State Machine - |LCD_CTRL|state_reg
+Name state_reg.FINISH state_reg.PROCESS state_reg.WAIT_CMD state_reg.FETCH_AND_STORE 
+state_reg.FETCH_AND_STORE 0 0 0 0 
+state_reg.WAIT_CMD 0 0 1 1 
+state_reg.PROCESS 0 1 0 1 
+state_reg.FINISH 1 0 0 1 
