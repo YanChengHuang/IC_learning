@@ -1,0 +1,20 @@
+
+State Machine - |TPA|state_TWP
+Name state_TWP.TWP_write state_TWP.TWP_write_fetch state_TWP.TWP_read_finish state_TWP.TWP_read state_TWP.TWP_read_fetch state_TWP.TWP_read_set state_TWP.TWP_wait_read state_TWP.TWP_gaddr state_TWP.TWP_set state_TWP.IDLE 
+state_TWP.IDLE 0 0 0 0 0 0 0 0 0 0 
+state_TWP.TWP_set 0 0 0 0 0 0 0 0 1 1 
+state_TWP.TWP_gaddr 0 0 0 0 0 0 0 1 0 1 
+state_TWP.TWP_wait_read 0 0 0 0 0 0 1 0 0 1 
+state_TWP.TWP_read_set 0 0 0 0 0 1 0 0 0 1 
+state_TWP.TWP_read_fetch 0 0 0 0 1 0 0 0 0 1 
+state_TWP.TWP_read 0 0 0 1 0 0 0 0 0 1 
+state_TWP.TWP_read_finish 0 0 1 0 0 0 0 0 0 1 
+state_TWP.TWP_write_fetch 0 1 0 0 0 0 0 0 0 1 
+state_TWP.TWP_write 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TPA|state_RIM
+Name state_RIM.RIM_write state_RIM.RIM_read state_RIM.RIM_set state_RIM.IDLE 
+state_RIM.IDLE 0 0 0 0 
+state_RIM.RIM_set 0 0 1 1 
+state_RIM.RIM_read 0 1 0 1 
+state_RIM.RIM_write 1 0 0 1 

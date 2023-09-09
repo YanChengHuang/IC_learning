@@ -1,6 +1,7 @@
 `timescale 1ns/10ps
 `define	simulation_time	300000000
 `define	cycle_time	1000.0
+// `define	cycle_time	100000.0
 `define sdf_file "./TPA_syn.sdf"
 
 `define pat "./Pattern_sti.dat"

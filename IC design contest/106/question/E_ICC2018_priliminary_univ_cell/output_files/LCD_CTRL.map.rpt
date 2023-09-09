@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD_CTRL
-Mon Sep 04 20:11:49 2023
+Tue Sep 05 12:02:54 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 04 20:11:49 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 05 12:02:54 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; LCD_CTRL                                    ;
 ; Top-level Entity Name              ; LCD_CTRL                                    ;
@@ -171,15 +171,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; MMS_4num.v                       ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_4num.v ;         ;
-; MMS_2num.v                       ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_2num.v ;         ;
-; LCD_CTRL.v                       ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; MMS_4num.v                       ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/MMS_4num.v ;         ;
+; MMS_2num.v                       ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/MMS_2num.v ;         ;
+; LCD_CTRL.v                       ; yes             ; User Verilog HDL File  ; C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -440,21 +440,21 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 04 20:11:10 2023
+    Info: Processing started: Tue Sep 05 12:02:16 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD_CTRL -c LCD_CTRL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mms_4num.v
-    Info (12023): Found entity 1: MMS_4num File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_4num.v Line: 1
+    Info (12023): Found entity 1: MMS_4num File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/MMS_4num.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mms_2num.v
-    Info (12023): Found entity 1: MMS_2num File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_2num.v Line: 1
+    Info (12023): Found entity 1: MMS_2num File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/MMS_2num.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_ctrl.v
-    Info (12023): Found entity 1: LCD_CTRL File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 1
+    Info (12023): Found entity 1: LCD_CTRL File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 1
 Info (12127): Elaborating entity "LCD_CTRL" for the top level hierarchy
-Info (10264): Verilog HDL Case Statement information at LCD_CTRL.v(37): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 37
-Info (12128): Elaborating entity "MMS_4num" for hierarchy "MMS_4num:a" File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 69
-Info (12128): Elaborating entity "MMS_2num" for hierarchy "MMS_4num:a|MMS_2num:upper" File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_4num.v Line: 14
-Info (13000): Registers with preset signals will power-up high File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 88
+Info (10264): Verilog HDL Case Statement information at LCD_CTRL.v(37): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 37
+Info (12128): Elaborating entity "MMS_4num" for hierarchy "MMS_4num:a" File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 69
+Info (12128): Elaborating entity "MMS_2num" for hierarchy "MMS_4num:a|MMS_2num:upper" File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/MMS_4num.v Line: 14
+Info (13000): Registers with preset signals will power-up high File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.v Line: 88
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
@@ -465,9 +465,9 @@ Info (21057): Implemented 4002 device resources after synthesis - the final reso
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 3963 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Mon Sep 04 20:11:49 2023
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:45
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Tue Sep 05 12:02:54 2023
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:44
 
 

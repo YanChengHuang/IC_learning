@@ -10,48 +10,48 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vhard_block
-Z0 !s110 1693829703
+Z0 !s110 1693886907
 !i10b 1
-!s100 `27h41SmnnOf^JczQN2V52
+!s100 87i5G^AU_^??U?bOQMb`e3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4ccco@;J[Ke;oBKEKbgP<1
+IAnmdI3bh4EeD?`M=XOVgd2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell
-Z4 w1693829588
-Z5 8C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo
-Z6 FC:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo
-!i122 124
-L0 92308 34
+Z3 dC:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell
+Z4 w1693886655
+Z5 8C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo
+Z6 FC:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo
+!i122 130
+L0 92290 34
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1693829702.000000
-Z9 !s107 C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo|
-Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo|
+Z8 !s108 1693886906.000000
+Z9 !s107 C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/LCD_CTRL.vo|
 !i113 1
 Z11 o-work work
 Z12 tCvgOpt 0
 vIRAM
-Z13 !s110 1693829970
+Z13 !s110 1693887076
 !i10b 1
 !s100 SNA<>cN]z:f79LFkPi7Ja1
 R1
-IdAdDN3T`?E4?c_cnDfidc3
+I9M@Y@8]a:YF<hO3NeIh2M1
 R2
 R3
-Z14 w1693829954
-Z15 8C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
-Z16 FC:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v
-!i122 129
+Z14 w1693887069
+Z15 8C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/testfixture.v
+Z16 FC:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/testfixture.v
+!i122 133
 L0 190 17
 R7
 r1
 !s85 0
 31
-Z17 !s108 1693829970.000000
-!s107 C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v|
-Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v|
+Z17 !s108 1693887075.000000
+!s107 C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/testfixture.v|
+Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/testfixture.v|
 !i113 1
 R11
 R12
@@ -61,20 +61,20 @@ R13
 !i10b 1
 !s100 YJ?FZ]23_i7Gb7Ad39B;;1
 R1
-IKV7fnR7TWQjn<63QJ1O761
+Ik7]hf[oFbP:AYNYf_danH3
 R2
 R3
 R14
 R15
 R16
-!i122 129
+!i122 133
 L0 165 19
 R7
 r1
 !s85 0
 31
 R17
-Z19 !s107 C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/testfixture.v|
+Z19 !s107 C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_priliminary_univ_cell/testfixture.v|
 R18
 !i113 1
 R11
@@ -83,16 +83,16 @@ n@i@r@o@m
 vLCD_CTRL
 R0
 !i10b 1
-!s100 <HDWR:hJ3mHEIa@J>fP;Y0
+!s100 HbCFUbSL95bWa8VPYb_;h2
 R1
-IY`BACd9`idLlZ5GXJbmVD1
+Ib[1F4TYJ<idRbhA[_0Sbe2
 R2
 R3
 R4
 R5
 R6
-!i122 124
-L0 32 92275
+!i122 130
+L0 32 92257
 R7
 r1
 !s85 0
@@ -111,7 +111,7 @@ vMMS_2num
 R1
 I02ma?Y9VGMJ6<@jdnih:I0
 R2
-R3
+Z20 dC:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell
 w1693282738
 8C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_2num.v
 FC:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_2num.v
@@ -135,7 +135,7 @@ vMMS_4num
 R1
 Ig_;lfzUZBd8C>E3W2BN=n0
 R2
-R3
+R20
 w1693569393
 8C:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_4num.v
 FC:/Users/User/Desktop/IC self_learning/IC design contest/106/E_ICC2018_priliminary_univ_cell/MMS_4num.v
@@ -157,13 +157,13 @@ R13
 !i10b 1
 !s100 XjzQoX0SLXZ:8c0IXJ6>e3
 R1
-Id^hRlQ9ABjkB5njiR54HP0
+IdeYEaoF>m4NjUC7]U@@m`1
 R2
 R3
 R14
 R15
 R16
-!i122 129
+!i122 133
 L0 26 135
 R7
 r1

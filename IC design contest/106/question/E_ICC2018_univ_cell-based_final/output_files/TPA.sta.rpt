@@ -1,0 +1,1361 @@
+Timing Analyzer report for TPA
+Sat Sep 09 17:18:47 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 125C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 125C Model Setup Summary
+  9. Slow 1200mV 125C Model Hold Summary
+ 10. Slow 1200mV 125C Model Recovery Summary
+ 11. Slow 1200mV 125C Model Removal Summary
+ 12. Slow 1200mV 125C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 125C Model Setup: 'clk'
+ 14. Slow 1200mV 125C Model Hold: 'clk'
+ 15. Slow 1200mV 125C Model Metastability Summary
+ 16. Slow 1200mV -40C Model Fmax Summary
+ 17. Slow 1200mV -40C Model Setup Summary
+ 18. Slow 1200mV -40C Model Hold Summary
+ 19. Slow 1200mV -40C Model Recovery Summary
+ 20. Slow 1200mV -40C Model Removal Summary
+ 21. Slow 1200mV -40C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV -40C Model Setup: 'clk'
+ 23. Slow 1200mV -40C Model Hold: 'clk'
+ 24. Slow 1200mV -40C Model Metastability Summary
+ 25. Fast 1200mV -40C Model Setup Summary
+ 26. Fast 1200mV -40C Model Hold Summary
+ 27. Fast 1200mV -40C Model Recovery Summary
+ 28. Fast 1200mV -40C Model Removal Summary
+ 29. Fast 1200mV -40C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV -40C Model Setup: 'clk'
+ 31. Fast 1200mV -40C Model Hold: 'clk'
+ 32. Fast 1200mV -40C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv n40c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 125c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv n40c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; TPA                                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE55F23A7                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.38        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  17.0%      ;
+;     Processor 3            ;  10.9%      ;
+;     Processor 4            ;   9.6%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; TPA.sdc       ; OK     ; Sat Sep 09 17:18:42 2023 ;
++---------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                         ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 10.000 ; 100.0 MHz ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 125C Model Fmax Summary             ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 99.96 MHz ; 99.96 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------+
+; Slow 1200mV 125C Model Setup Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; clk   ; -0.004 ; -0.004              ;
++-------+--------+---------------------+
+
+
++-------------------------------------+
+; Slow 1200mV 125C Model Hold Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.423 ; 0.000               ;
++-------+-------+---------------------+
+
+
+-------------------------------------------
+; Slow 1200mV 125C Model Recovery Summary ;
+-------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 125C Model Removal Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Slow 1200mV 125C Model Minimum Pulse Width Summary ;
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 4.737 ; 0.000                              ;
++-------+-------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 125C Model Setup: 'clk'                                                                                   ;
++--------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -0.004 ; TWP_addr[0] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.123     ; 9.898      ;
+; 0.148  ; TWP_addr[0] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.080     ; 9.789      ;
+; 0.148  ; TWP_addr[0] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.080     ; 9.789      ;
+; 0.153  ; TWP_addr[0] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.130     ; 9.734      ;
+; 0.171  ; TWP_addr[0] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.088     ; 9.758      ;
+; 0.191  ; TWP_addr[5] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.128     ; 9.698      ;
+; 0.193  ; TWP_addr[0] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.079     ; 9.745      ;
+; 0.244  ; TWP_addr[6] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.123     ; 9.650      ;
+; 0.256  ; TWP_addr[0] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.129     ; 9.632      ;
+; 0.308  ; TWP_addr[1] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.124     ; 9.585      ;
+; 0.312  ; TWP_addr[0] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.103     ; 9.602      ;
+; 0.312  ; TWP_addr[0] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.103     ; 9.602      ;
+; 0.371  ; TWP_addr[6] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.080     ; 9.566      ;
+; 0.371  ; TWP_addr[6] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.080     ; 9.566      ;
+; 0.375  ; TWP_addr[5] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.085     ; 9.557      ;
+; 0.375  ; TWP_addr[5] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.085     ; 9.557      ;
+; 0.376  ; TWP_addr[6] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.130     ; 9.511      ;
+; 0.380  ; TWP_addr[0] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.081     ; 9.556      ;
+; 0.380  ; TWP_addr[5] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.135     ; 9.502      ;
+; 0.394  ; TWP_addr[6] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.088     ; 9.535      ;
+; 0.398  ; TWP_addr[5] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.093     ; 9.526      ;
+; 0.402  ; TWP_addr[0] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.081     ; 9.534      ;
+; 0.406  ; TWP_addr[7] ; TWP_read_data[2]         ; clk          ; clk         ; 10.000       ; -0.079     ; 9.532      ;
+; 0.406  ; TWP_addr[6] ; TWP_read_data[2]         ; clk          ; clk         ; 10.000       ; -0.079     ; 9.532      ;
+; 0.416  ; TWP_addr[6] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.079     ; 9.522      ;
+; 0.420  ; TWP_addr[5] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.084     ; 9.513      ;
+; 0.421  ; TWP_addr[0] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.128     ; 9.468      ;
+; 0.431  ; TWP_addr[0] ; Register_Spaces[33][14]  ; clk          ; clk         ; 10.000       ; -0.096     ; 9.490      ;
+; 0.435  ; TWP_addr[3] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.124     ; 9.458      ;
+; 0.443  ; TWP_addr[0] ; Register_Spaces[90][14]  ; clk          ; clk         ; 10.000       ; -0.076     ; 9.498      ;
+; 0.446  ; TWP_addr[0] ; Register_Spaces[133][15] ; clk          ; clk         ; 10.000       ; -0.099     ; 9.472      ;
+; 0.462  ; TWP_addr[0] ; Register_Spaces[94][6]   ; clk          ; clk         ; 10.000       ; -0.078     ; 9.477      ;
+; 0.462  ; TWP_addr[0] ; Register_Spaces[94][4]   ; clk          ; clk         ; 10.000       ; -0.078     ; 9.477      ;
+; 0.462  ; TWP_addr[0] ; Register_Spaces[94][5]   ; clk          ; clk         ; 10.000       ; -0.078     ; 9.477      ;
+; 0.462  ; TWP_addr[0] ; Register_Spaces[94][7]   ; clk          ; clk         ; 10.000       ; -0.078     ; 9.477      ;
+; 0.466  ; TWP_addr[0] ; Register_Spaces[94][14]  ; clk          ; clk         ; 10.000       ; -0.093     ; 9.458      ;
+; 0.474  ; TWP_addr[1] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.081     ; 9.462      ;
+; 0.474  ; TWP_addr[1] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.081     ; 9.462      ;
+; 0.479  ; TWP_addr[1] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.131     ; 9.407      ;
+; 0.479  ; TWP_addr[6] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.129     ; 9.409      ;
+; 0.480  ; TWP_addr[5] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.134     ; 9.403      ;
+; 0.491  ; TWP_addr[0] ; Register_Spaces[26][9]   ; clk          ; clk         ; 10.000       ; -0.087     ; 9.439      ;
+; 0.491  ; TWP_addr[0] ; Register_Spaces[26][11]  ; clk          ; clk         ; 10.000       ; -0.087     ; 9.439      ;
+; 0.492  ; TWP_addr[0] ; Register_Spaces[33][5]   ; clk          ; clk         ; 10.000       ; -0.100     ; 9.425      ;
+; 0.497  ; TWP_addr[1] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.089     ; 9.431      ;
+; 0.500  ; TWP_addr[0] ; Register_Spaces[130][9]  ; clk          ; clk         ; 10.000       ; -0.082     ; 9.435      ;
+; 0.506  ; TWP_addr[0] ; TWP_read_data[6]         ; clk          ; clk         ; 10.000       ; -0.079     ; 9.432      ;
+; 0.509  ; TWP_addr[0] ; Register_Spaces[33][12]  ; clk          ; clk         ; 10.000       ; -0.123     ; 9.385      ;
+; 0.511  ; TWP_addr[2] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.123     ; 9.383      ;
+; 0.516  ; TWP_addr[2] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.128     ; 9.373      ;
+; 0.519  ; TWP_addr[1] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.080     ; 9.418      ;
+; 0.527  ; TWP_addr[0] ; Register_Spaces[224][1]  ; clk          ; clk         ; 10.000       ; -0.078     ; 9.412      ;
+; 0.534  ; TWP_addr[0] ; Register_Spaces[199][10] ; clk          ; clk         ; 10.000       ; -0.077     ; 9.406      ;
+; 0.534  ; TWP_addr[0] ; Register_Spaces[199][15] ; clk          ; clk         ; 10.000       ; -0.077     ; 9.406      ;
+; 0.535  ; TWP_addr[6] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.103     ; 9.379      ;
+; 0.535  ; TWP_addr[6] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.103     ; 9.379      ;
+; 0.536  ; TWP_addr[0] ; TWP_read_data[2]         ; clk          ; clk         ; 10.000       ; -0.079     ; 9.402      ;
+; 0.539  ; TWP_addr[4] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.128     ; 9.350      ;
+; 0.539  ; TWP_addr[5] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.108     ; 9.370      ;
+; 0.539  ; TWP_addr[5] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.108     ; 9.370      ;
+; 0.541  ; TWP_addr[0] ; Register_Spaces[137][7]  ; clk          ; clk         ; 10.000       ; -0.092     ; 9.384      ;
+; 0.560  ; TWP_addr[0] ; Register_Spaces[94][3]   ; clk          ; clk         ; 10.000       ; -0.122     ; 9.335      ;
+; 0.561  ; TWP_addr[0] ; Register_Spaces[179][6]  ; clk          ; clk         ; 10.000       ; -0.082     ; 9.374      ;
+; 0.561  ; TWP_addr[0] ; Register_Spaces[179][12] ; clk          ; clk         ; 10.000       ; -0.082     ; 9.374      ;
+; 0.561  ; TWP_addr[0] ; Register_Spaces[173][12] ; clk          ; clk         ; 10.000       ; -0.123     ; 9.333      ;
+; 0.561  ; TWP_addr[0] ; Register_Spaces[179][8]  ; clk          ; clk         ; 10.000       ; -0.082     ; 9.374      ;
+; 0.565  ; TWP_addr[0] ; Register_Spaces[168][2]  ; clk          ; clk         ; 10.000       ; -0.103     ; 9.349      ;
+; 0.565  ; TWP_addr[0] ; Register_Spaces[168][15] ; clk          ; clk         ; 10.000       ; -0.103     ; 9.349      ;
+; 0.565  ; TWP_addr[0] ; Register_Spaces[168][9]  ; clk          ; clk         ; 10.000       ; -0.103     ; 9.349      ;
+; 0.565  ; TWP_addr[0] ; Register_Spaces[168][12] ; clk          ; clk         ; 10.000       ; -0.103     ; 9.349      ;
+; 0.565  ; TWP_addr[0] ; Register_Spaces[168][5]  ; clk          ; clk         ; 10.000       ; -0.103     ; 9.349      ;
+; 0.565  ; TWP_addr[0] ; Register_Spaces[168][7]  ; clk          ; clk         ; 10.000       ; -0.103     ; 9.349      ;
+; 0.579  ; TWP_addr[0] ; Register_Spaces[133][4]  ; clk          ; clk         ; 10.000       ; -0.074     ; 9.364      ;
+; 0.580  ; TWP_addr[1] ; TWP_read_data[6]         ; clk          ; clk         ; 10.000       ; -0.080     ; 9.357      ;
+; 0.582  ; TWP_addr[1] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.130     ; 9.305      ;
+; 0.591  ; TWP_addr[0] ; Register_Spaces[209][13] ; clk          ; clk         ; 10.000       ; -0.105     ; 9.321      ;
+; 0.592  ; TWP_addr[0] ; Register_Spaces[209][15] ; clk          ; clk         ; 10.000       ; -0.105     ; 9.320      ;
+; 0.598  ; TWP_addr[3] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.081     ; 9.338      ;
+; 0.598  ; TWP_addr[3] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.081     ; 9.338      ;
+; 0.600  ; TWP_addr[3] ; Register_Spaces[17][3]   ; clk          ; clk         ; 10.000       ; -0.140     ; 9.277      ;
+; 0.601  ; TWP_addr[0] ; Register_Spaces[4][0]    ; clk          ; clk         ; 10.000       ; -0.127     ; 9.289      ;
+; 0.603  ; TWP_addr[3] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.131     ; 9.283      ;
+; 0.603  ; TWP_addr[6] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.081     ; 9.333      ;
+; 0.607  ; TWP_addr[5] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.086     ; 9.324      ;
+; 0.609  ; TWP_addr[0] ; Register_Spaces[26][5]   ; clk          ; clk         ; 10.000       ; -0.103     ; 9.305      ;
+; 0.611  ; TWP_addr[0] ; Register_Spaces[168][4]  ; clk          ; clk         ; 10.000       ; -0.109     ; 9.297      ;
+; 0.612  ; TWP_addr[7] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.123     ; 9.282      ;
+; 0.621  ; TWP_addr[3] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.089     ; 9.307      ;
+; 0.625  ; TWP_addr[0] ; Register_Spaces[137][6]  ; clk          ; clk         ; 10.000       ; -0.102     ; 9.290      ;
+; 0.625  ; TWP_addr[0] ; Register_Spaces[137][12] ; clk          ; clk         ; 10.000       ; -0.102     ; 9.290      ;
+; 0.625  ; TWP_addr[6] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.081     ; 9.311      ;
+; 0.626  ; TWP_addr[4] ; TWP_read_data[8]         ; clk          ; clk         ; 10.000       ; -0.129     ; 9.262      ;
+; 0.626  ; TWP_addr[5] ; Register_Spaces[33][14]  ; clk          ; clk         ; 10.000       ; -0.101     ; 9.290      ;
+; 0.629  ; TWP_addr[5] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.086     ; 9.302      ;
+; 0.638  ; TWP_addr[2] ; Register_Spaces[8][3]    ; clk          ; clk         ; 10.000       ; -0.108     ; 9.271      ;
+; 0.638  ; TWP_addr[1] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.104     ; 9.275      ;
+; 0.638  ; TWP_addr[1] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.104     ; 9.275      ;
+; 0.643  ; TWP_addr[3] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.080     ; 9.294      ;
+; 0.644  ; TWP_addr[6] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.128     ; 9.245      ;
+; 0.647  ; TWP_addr[0] ; Register_Spaces[71][9]   ; clk          ; clk         ; 10.000       ; -0.120     ; 9.250      ;
++--------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 125C Model Hold: 'clk'                                                                                                  ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.423 ; TWP_data_idx[2]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.692      ;
+; 0.423 ; TWP_data_idx[1]           ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.692      ;
+; 0.424 ; TWP_read_data[7]          ; TWP_read_data[7]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; cfg_rdy~reg0              ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[0]          ; TWP_read_data[0]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_wr                    ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_addr[3]               ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_addr[1]               ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_addr[7]               ; TWP_addr[7]               ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[12]         ; TWP_read_data[12]         ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[1]          ; TWP_read_data[1]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[9]          ; TWP_read_data[9]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[13]         ; TWP_read_data[13]         ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[14]         ; TWP_read_data[14]         ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[10]         ; TWP_read_data[10]         ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[2]          ; TWP_read_data[2]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_read_data[6]          ; TWP_read_data[6]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; state_TWP.TWP_read        ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_wait_count            ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_addr_idx[1]           ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_addr_idx[2]           ; TWP_addr_idx[2]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_data_idx[0]           ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; TWP_addr_idx[0]           ; TWP_addr_idx[0]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; state_TWP.TWP_wait_read   ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.424 ; state_TWP.TWP_write       ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.079      ; 0.692      ;
+; 0.425 ; TWP_read_data[4]          ; TWP_read_data[4]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.692      ;
+; 0.425 ; TWP_read_data[8]          ; TWP_read_data[8]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.692      ;
+; 0.425 ; TWP_read_data[5]          ; TWP_read_data[5]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.692      ;
+; 0.425 ; TWP_read_data[11]         ; TWP_read_data[11]         ; clk          ; clk         ; 0.000        ; 0.078      ; 0.692      ;
+; 0.425 ; TWP_read_data[3]          ; TWP_read_data[3]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.692      ;
+; 0.425 ; TWP_read_data[15]         ; TWP_read_data[15]         ; clk          ; clk         ; 0.000        ; 0.078      ; 0.692      ;
+; 0.444 ; state_TWP.TWP_wait_read   ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.079      ; 0.712      ;
+; 0.444 ; TWP_wait_count            ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.079      ; 0.712      ;
+; 0.471 ; state_RIM.RIM_set         ; state_RIM.RIM_read        ; clk          ; clk         ; 0.000        ; 0.079      ; 0.739      ;
+; 0.472 ; state_RIM.RIM_set         ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.740      ;
+; 0.661 ; TWP_data_idx[0]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.930      ;
+; 0.661 ; TWP_data_idx[0]           ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.930      ;
+; 0.664 ; state_TWP.TWP_wait_read   ; state_TWP.TWP_read_set    ; clk          ; clk         ; 0.000        ; 0.079      ; 0.932      ;
+; 0.665 ; TWP_wait_count            ; state_TWP.TWP_read_set    ; clk          ; clk         ; 0.000        ; 0.079      ; 0.933      ;
+; 0.677 ; state_TWP.TWP_set         ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.079      ; 0.945      ;
+; 0.685 ; TWP_read_data[3]          ; Register_Spaces[33][3]    ; clk          ; clk         ; 0.000        ; 0.078      ; 0.952      ;
+; 0.695 ; TWP_data_idx[1]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.964      ;
+; 0.696 ; state_TWP.TWP_gaddr       ; TWP_addr_idx[0]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.964      ;
+; 0.696 ; state_TWP.TWP_read_fetch  ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.079      ; 0.964      ;
+; 0.704 ; state_TWP.TWP_write       ; state_TWP.TWP_write_fetch ; clk          ; clk         ; 0.000        ; 0.079      ; 0.972      ;
+; 0.707 ; state_TWP.TWP_read        ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.975      ;
+; 0.721 ; state_TWP.TWP_write       ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.989      ;
+; 0.724 ; state_TWP.TWP_read        ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.079      ; 0.992      ;
+; 0.726 ; state_RIM.IDLE            ; state_RIM.RIM_set         ; clk          ; clk         ; 0.000        ; 0.079      ; 0.994      ;
+; 0.748 ; state_RIM.RIM_read        ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.079      ; 1.016      ;
+; 0.753 ; state_TWP.IDLE            ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.079      ; 1.021      ;
+; 0.760 ; state_TWP.IDLE            ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.079      ; 1.028      ;
+; 0.770 ; state_TWP.TWP_read_set    ; state_TWP.TWP_read_fetch  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.038      ;
+; 0.798 ; state_TWP.IDLE            ; TWP_data_idx[3]           ; clk          ; clk         ; 0.000        ; 0.080      ; 1.067      ;
+; 0.827 ; state_TWP.TWP_read        ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.079      ; 1.095      ;
+; 0.834 ; TWP_wr                    ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.102      ;
+; 0.836 ; state_TWP.TWP_read        ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.079      ; 1.104      ;
+; 0.877 ; TWP_addr_idx[2]           ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.145      ;
+; 0.878 ; TWP_wr                    ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.079      ; 1.146      ;
+; 0.882 ; TWP_read_data[9]          ; Register_Spaces[174][9]   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.171      ;
+; 0.890 ; TWP_read_data[9]          ; Register_Spaces[76][9]    ; clk          ; clk         ; 0.000        ; 0.079      ; 1.158      ;
+; 0.891 ; TWP_read_data[9]          ; Register_Spaces[12][9]    ; clk          ; clk         ; 0.000        ; 0.079      ; 1.159      ;
+; 0.897 ; TWP_read_data[0]          ; Register_Spaces[92][0]    ; clk          ; clk         ; 0.000        ; 0.080      ; 1.166      ;
+; 0.899 ; TWP_read_data[1]          ; Register_Spaces[186][1]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.169      ;
+; 0.902 ; state_TWP.IDLE            ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.080      ; 1.171      ;
+; 0.902 ; state_TWP.TWP_gaddr       ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.081      ; 1.172      ;
+; 0.903 ; state_TWP.IDLE            ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.080      ; 1.172      ;
+; 0.922 ; TWP_read_data[10]         ; Register_Spaces[157][10]  ; clk          ; clk         ; 0.000        ; 0.100      ; 1.211      ;
+; 0.934 ; TWP_read_data[3]          ; Register_Spaces[121][3]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.204      ;
+; 0.942 ; TWP_read_data[5]          ; Register_Spaces[213][5]   ; clk          ; clk         ; 0.000        ; 0.079      ; 1.210      ;
+; 0.967 ; state_TWP.IDLE            ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.079      ; 1.235      ;
+; 0.969 ; TWP_read_data[4]          ; Register_Spaces[87][4]    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.240      ;
+; 0.970 ; TWP_read_data[15]         ; Register_Spaces[101][15]  ; clk          ; clk         ; 0.000        ; 0.079      ; 1.238      ;
+; 0.970 ; TWP_read_data[15]         ; Register_Spaces[118][15]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.239      ;
+; 0.977 ; TWP_read_data[8]          ; Register_Spaces[32][8]    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.248      ;
+; 0.990 ; TWP_read_data[8]          ; Register_Spaces[58][8]    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.262      ;
+; 0.999 ; TWP_read_data[8]          ; Register_Spaces[78][8]    ; clk          ; clk         ; 0.000        ; 0.076      ; 1.264      ;
+; 1.000 ; TWP_read_data[1]          ; Register_Spaces[180][1]   ; clk          ; clk         ; 0.000        ; 0.063      ; 1.252      ;
+; 1.014 ; TWP_read_data[11]         ; Register_Spaces[163][11]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
+; 1.031 ; state_TWP.TWP_gaddr       ; TWP_addr[6]               ; clk          ; clk         ; 0.000        ; 0.080      ; 1.300      ;
+; 1.032 ; state_RIM.RIM_read        ; state_RIM.IDLE            ; clk          ; clk         ; 0.000        ; 0.079      ; 1.300      ;
+; 1.048 ; TWP_read_data[6]          ; Register_Spaces[160][6]   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.337      ;
+; 1.061 ; state_TWP.TWP_write_fetch ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.079      ; 1.329      ;
+; 1.062 ; TWP_read_data[9]          ; Register_Spaces[17][9]    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.334      ;
+; 1.070 ; TWP_data_idx[2]           ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.079      ; 1.338      ;
+; 1.070 ; TWP_data_idx[2]           ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.079      ; 1.338      ;
+; 1.071 ; TWP_data_idx[2]           ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.079      ; 1.339      ;
+; 1.073 ; TWP_read_data[13]         ; Register_Spaces[86][13]   ; clk          ; clk         ; 0.000        ; 0.077      ; 1.339      ;
+; 1.075 ; TWP_read_data[13]         ; Register_Spaces[22][13]   ; clk          ; clk         ; 0.000        ; 0.077      ; 1.341      ;
+; 1.075 ; TWP_data_idx[2]           ; state_TWP.TWP_write_fetch ; clk          ; clk         ; 0.000        ; 0.079      ; 1.343      ;
+; 1.076 ; TWP_addr_idx[1]           ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.344      ;
+; 1.076 ; TWP_addr[6]               ; TWP_addr[6]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.344      ;
+; 1.082 ; TWP_data_idx[2]           ; TWP_data_idx[3]           ; clk          ; clk         ; 0.000        ; 0.080      ; 1.351      ;
+; 1.086 ; TWP_addr_idx[2]           ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.354      ;
+; 1.087 ; TWP_read_data[3]          ; Register_Spaces[34][3]    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.358      ;
+; 1.097 ; TWP_read_data[3]          ; Register_Spaces[114][3]   ; clk          ; clk         ; 0.000        ; 0.093      ; 1.379      ;
+; 1.102 ; TWP_addr_idx[1]           ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.079      ; 1.370      ;
+; 1.108 ; TWP_read_data[11]         ; Register_Spaces[143][11]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.378      ;
+; 1.110 ; state_TWP.TWP_read_fetch  ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.079      ; 1.378      ;
+; 1.113 ; TWP_read_data[1]          ; Register_Spaces[8][1]     ; clk          ; clk         ; 0.000        ; 0.086      ; 1.388      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+------------------------------------------------
+; Slow 1200mV 125C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------+
+; Slow 1200mV -40C Model Fmax Summary             ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 111.0 MHz ; 111.0 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Slow 1200mV -40C Model Setup Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; clk   ; 0.991 ; 0.000                ;
++-------+-------+----------------------+
+
+
++-------------------------------------+
+; Slow 1200mV -40C Model Hold Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.340 ; 0.000               ;
++-------+-------+---------------------+
+
+
+-------------------------------------------
+; Slow 1200mV -40C Model Recovery Summary ;
+-------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV -40C Model Removal Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Slow 1200mV -40C Model Minimum Pulse Width Summary ;
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 4.776 ; 0.000                              ;
++-------+-------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV -40C Model Setup: 'clk'                                                                                  ;
++-------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; 0.991 ; TWP_addr[0] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.100     ; 8.929      ;
+; 1.156 ; TWP_addr[5] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.106     ; 8.758      ;
+; 1.217 ; TWP_addr[6] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.103     ; 8.700      ;
+; 1.218 ; TWP_addr[0] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.065     ; 8.737      ;
+; 1.218 ; TWP_addr[0] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.065     ; 8.737      ;
+; 1.240 ; TWP_addr[0] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.111     ; 8.669      ;
+; 1.240 ; TWP_addr[0] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.107     ; 8.673      ;
+; 1.255 ; TWP_addr[0] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.064     ; 8.701      ;
+; 1.305 ; TWP_addr[1] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.102     ; 8.613      ;
+; 1.381 ; TWP_addr[0] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.107     ; 8.532      ;
+; 1.383 ; TWP_addr[5] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.071     ; 8.566      ;
+; 1.383 ; TWP_addr[5] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.071     ; 8.566      ;
+; 1.388 ; TWP_addr[0] ; Register_Spaces[33][14]  ; clk          ; clk         ; 10.000       ; -0.077     ; 8.555      ;
+; 1.388 ; TWP_addr[0] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.074     ; 8.558      ;
+; 1.405 ; TWP_addr[5] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.117     ; 8.498      ;
+; 1.405 ; TWP_addr[5] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.113     ; 8.502      ;
+; 1.409 ; TWP_addr[0] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.066     ; 8.545      ;
+; 1.413 ; TWP_addr[0] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.083     ; 8.524      ;
+; 1.413 ; TWP_addr[0] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.083     ; 8.524      ;
+; 1.420 ; TWP_addr[5] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.070     ; 8.530      ;
+; 1.422 ; TWP_addr[3] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.102     ; 8.496      ;
+; 1.430 ; TWP_addr[4] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.106     ; 8.484      ;
+; 1.437 ; TWP_addr[2] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.107     ; 8.476      ;
+; 1.444 ; TWP_addr[6] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.068     ; 8.508      ;
+; 1.444 ; TWP_addr[6] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.068     ; 8.508      ;
+; 1.451 ; TWP_addr[0] ; Register_Spaces[94][6]   ; clk          ; clk         ; 10.000       ; -0.062     ; 8.507      ;
+; 1.451 ; TWP_addr[0] ; Register_Spaces[94][4]   ; clk          ; clk         ; 10.000       ; -0.062     ; 8.507      ;
+; 1.451 ; TWP_addr[0] ; Register_Spaces[94][5]   ; clk          ; clk         ; 10.000       ; -0.062     ; 8.507      ;
+; 1.451 ; TWP_addr[0] ; Register_Spaces[94][7]   ; clk          ; clk         ; 10.000       ; -0.062     ; 8.507      ;
+; 1.455 ; TWP_addr[2] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.100     ; 8.465      ;
+; 1.466 ; TWP_addr[6] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.114     ; 8.440      ;
+; 1.466 ; TWP_addr[6] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.110     ; 8.444      ;
+; 1.474 ; TWP_addr[0] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.066     ; 8.480      ;
+; 1.481 ; TWP_addr[6] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.067     ; 8.472      ;
+; 1.482 ; TWP_addr[0] ; Register_Spaces[33][12]  ; clk          ; clk         ; 10.000       ; -0.102     ; 8.436      ;
+; 1.490 ; TWP_addr[0] ; Register_Spaces[209][13] ; clk          ; clk         ; 10.000       ; -0.090     ; 8.440      ;
+; 1.491 ; TWP_addr[0] ; Register_Spaces[209][15] ; clk          ; clk         ; 10.000       ; -0.090     ; 8.439      ;
+; 1.492 ; TWP_addr[0] ; Register_Spaces[173][12] ; clk          ; clk         ; 10.000       ; -0.105     ; 8.423      ;
+; 1.493 ; TWP_addr[0] ; Register_Spaces[94][14]  ; clk          ; clk         ; 10.000       ; -0.078     ; 8.449      ;
+; 1.510 ; TWP_addr[0] ; Register_Spaces[90][14]  ; clk          ; clk         ; 10.000       ; -0.060     ; 8.450      ;
+; 1.512 ; TWP_addr[0] ; Register_Spaces[33][5]   ; clk          ; clk         ; 10.000       ; -0.080     ; 8.428      ;
+; 1.517 ; TWP_addr[0] ; Register_Spaces[94][3]   ; clk          ; clk         ; 10.000       ; -0.100     ; 8.403      ;
+; 1.529 ; TWP_addr[0] ; Register_Spaces[133][15] ; clk          ; clk         ; 10.000       ; -0.086     ; 8.405      ;
+; 1.532 ; TWP_addr[1] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.067     ; 8.421      ;
+; 1.532 ; TWP_addr[1] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.067     ; 8.421      ;
+; 1.537 ; TWP_addr[0] ; Register_Spaces[4][0]    ; clk          ; clk         ; 10.000       ; -0.105     ; 8.378      ;
+; 1.546 ; TWP_addr[5] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.113     ; 8.361      ;
+; 1.547 ; TWP_addr[7] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.103     ; 8.370      ;
+; 1.553 ; TWP_addr[5] ; Register_Spaces[33][14]  ; clk          ; clk         ; 10.000       ; -0.083     ; 8.384      ;
+; 1.553 ; TWP_addr[5] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.080     ; 8.387      ;
+; 1.554 ; TWP_addr[1] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.113     ; 8.353      ;
+; 1.554 ; TWP_addr[1] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.109     ; 8.357      ;
+; 1.560 ; TWP_addr[0] ; Register_Spaces[199][10] ; clk          ; clk         ; 10.000       ; -0.061     ; 8.399      ;
+; 1.561 ; TWP_addr[0] ; Register_Spaces[199][15] ; clk          ; clk         ; 10.000       ; -0.061     ; 8.398      ;
+; 1.564 ; TWP_addr[0] ; Register_Spaces[26][9]   ; clk          ; clk         ; 10.000       ; -0.072     ; 8.384      ;
+; 1.564 ; TWP_addr[0] ; Register_Spaces[26][11]  ; clk          ; clk         ; 10.000       ; -0.072     ; 8.384      ;
+; 1.565 ; TWP_addr[0] ; Register_Spaces[179][6]  ; clk          ; clk         ; 10.000       ; -0.069     ; 8.386      ;
+; 1.565 ; TWP_addr[0] ; Register_Spaces[179][12] ; clk          ; clk         ; 10.000       ; -0.069     ; 8.386      ;
+; 1.565 ; TWP_addr[0] ; Register_Spaces[179][8]  ; clk          ; clk         ; 10.000       ; -0.069     ; 8.386      ;
+; 1.569 ; TWP_addr[1] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.066     ; 8.385      ;
+; 1.574 ; TWP_addr[5] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.072     ; 8.374      ;
+; 1.578 ; TWP_addr[5] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.089     ; 8.353      ;
+; 1.578 ; TWP_addr[5] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.089     ; 8.353      ;
+; 1.585 ; TWP_addr[2] ; Register_Spaces[8][3]    ; clk          ; clk         ; 10.000       ; -0.088     ; 8.347      ;
+; 1.596 ; TWP_addr[0] ; Register_Spaces[224][1]  ; clk          ; clk         ; 10.000       ; -0.063     ; 8.361      ;
+; 1.600 ; TWP_addr[0] ; TWP_read_data[2]         ; clk          ; clk         ; 10.000       ; -0.065     ; 8.355      ;
+; 1.604 ; TWP_addr[0] ; Register_Spaces[168][2]  ; clk          ; clk         ; 10.000       ; -0.083     ; 8.333      ;
+; 1.604 ; TWP_addr[0] ; Register_Spaces[168][15] ; clk          ; clk         ; 10.000       ; -0.083     ; 8.333      ;
+; 1.604 ; TWP_addr[0] ; Register_Spaces[168][9]  ; clk          ; clk         ; 10.000       ; -0.083     ; 8.333      ;
+; 1.604 ; TWP_addr[0] ; Register_Spaces[168][12] ; clk          ; clk         ; 10.000       ; -0.083     ; 8.333      ;
+; 1.604 ; TWP_addr[0] ; Register_Spaces[168][5]  ; clk          ; clk         ; 10.000       ; -0.083     ; 8.333      ;
+; 1.604 ; TWP_addr[0] ; Register_Spaces[168][7]  ; clk          ; clk         ; 10.000       ; -0.083     ; 8.333      ;
+; 1.606 ; TWP_addr[2] ; Register_Spaces[8][6]    ; clk          ; clk         ; 10.000       ; -0.077     ; 8.337      ;
+; 1.607 ; TWP_addr[6] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.110     ; 8.303      ;
+; 1.608 ; TWP_addr[0] ; Register_Spaces[37][4]   ; clk          ; clk         ; 10.000       ; -0.087     ; 8.325      ;
+; 1.610 ; TWP_addr[0] ; Register_Spaces[37][7]   ; clk          ; clk         ; 10.000       ; -0.064     ; 8.346      ;
+; 1.614 ; TWP_addr[3] ; Register_Spaces[17][3]   ; clk          ; clk         ; 10.000       ; -0.120     ; 8.286      ;
+; 1.614 ; TWP_addr[6] ; Register_Spaces[33][14]  ; clk          ; clk         ; 10.000       ; -0.080     ; 8.326      ;
+; 1.614 ; TWP_addr[6] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.077     ; 8.329      ;
+; 1.616 ; TWP_addr[5] ; Register_Spaces[94][6]   ; clk          ; clk         ; 10.000       ; -0.068     ; 8.336      ;
+; 1.616 ; TWP_addr[5] ; Register_Spaces[94][4]   ; clk          ; clk         ; 10.000       ; -0.068     ; 8.336      ;
+; 1.616 ; TWP_addr[5] ; Register_Spaces[94][5]   ; clk          ; clk         ; 10.000       ; -0.068     ; 8.336      ;
+; 1.616 ; TWP_addr[5] ; Register_Spaces[94][7]   ; clk          ; clk         ; 10.000       ; -0.068     ; 8.336      ;
+; 1.617 ; TWP_addr[0] ; Register_Spaces[71][9]   ; clk          ; clk         ; 10.000       ; -0.106     ; 8.297      ;
+; 1.626 ; TWP_addr[0] ; Register_Spaces[83][8]   ; clk          ; clk         ; 10.000       ; -0.107     ; 8.287      ;
+; 1.629 ; TWP_addr[0] ; Register_Spaces[83][9]   ; clk          ; clk         ; 10.000       ; -0.108     ; 8.283      ;
+; 1.629 ; TWP_addr[0] ; Register_Spaces[83][12]  ; clk          ; clk         ; 10.000       ; -0.108     ; 8.283      ;
+; 1.629 ; TWP_addr[0] ; Register_Spaces[83][4]   ; clk          ; clk         ; 10.000       ; -0.108     ; 8.283      ;
+; 1.635 ; TWP_addr[6] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.069     ; 8.316      ;
+; 1.637 ; TWP_addr[0] ; Register_Spaces[168][4]  ; clk          ; clk         ; 10.000       ; -0.091     ; 8.292      ;
+; 1.639 ; TWP_addr[0] ; Register_Spaces[133][4]  ; clk          ; clk         ; 10.000       ; -0.059     ; 8.322      ;
+; 1.639 ; TWP_addr[6] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.086     ; 8.295      ;
+; 1.639 ; TWP_addr[6] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.086     ; 8.295      ;
+; 1.639 ; TWP_addr[5] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.072     ; 8.309      ;
+; 1.643 ; TWP_addr[0] ; Register_Spaces[35][11]  ; clk          ; clk         ; 10.000       ; -0.063     ; 8.314      ;
+; 1.646 ; TWP_addr[0] ; Register_Spaces[34][13]  ; clk          ; clk         ; 10.000       ; -0.065     ; 8.309      ;
+; 1.646 ; TWP_addr[0] ; Register_Spaces[34][9]   ; clk          ; clk         ; 10.000       ; -0.065     ; 8.309      ;
+; 1.647 ; TWP_addr[0] ; Register_Spaces[173][14] ; clk          ; clk         ; 10.000       ; -0.077     ; 8.296      ;
+; 1.647 ; TWP_addr[5] ; Register_Spaces[33][12]  ; clk          ; clk         ; 10.000       ; -0.108     ; 8.265      ;
+; 1.649 ; TWP_addr[3] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.067     ; 8.304      ;
++-------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV -40C Model Hold: 'clk'                                                                                                  ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.340 ; TWP_read_data[7]          ; TWP_read_data[7]          ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_read_data[5]          ; TWP_read_data[5]          ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_read_data[11]         ; TWP_read_data[11]         ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_addr[7]               ; TWP_addr[7]               ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_read_data[12]         ; TWP_read_data[12]         ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_read_data[13]         ; TWP_read_data[13]         ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_read_data[14]         ; TWP_read_data[14]         ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_data_idx[2]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.340 ; TWP_data_idx[1]           ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.066      ; 0.574      ;
+; 0.341 ; TWP_read_data[8]          ; TWP_read_data[8]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; cfg_rdy~reg0              ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[0]          ; TWP_read_data[0]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_wr                    ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_addr[3]               ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_addr[1]               ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[1]          ; TWP_read_data[1]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[9]          ; TWP_read_data[9]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[3]          ; TWP_read_data[3]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[15]         ; TWP_read_data[15]         ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[10]         ; TWP_read_data[10]         ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[2]          ; TWP_read_data[2]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_read_data[6]          ; TWP_read_data[6]          ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; state_TWP.TWP_read        ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_wait_count            ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_addr_idx[1]           ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_addr_idx[2]           ; TWP_addr_idx[2]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_data_idx[0]           ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; TWP_addr_idx[0]           ; TWP_addr_idx[0]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; state_TWP.TWP_wait_read   ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; state_TWP.TWP_write       ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.342 ; TWP_read_data[4]          ; TWP_read_data[4]          ; clk          ; clk         ; 0.000        ; 0.064      ; 0.574      ;
+; 0.383 ; TWP_wait_count            ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.065      ; 0.616      ;
+; 0.384 ; state_TWP.TWP_wait_read   ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.065      ; 0.617      ;
+; 0.417 ; state_RIM.RIM_set         ; state_RIM.RIM_read        ; clk          ; clk         ; 0.000        ; 0.065      ; 0.650      ;
+; 0.419 ; state_RIM.RIM_set         ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.065      ; 0.652      ;
+; 0.580 ; state_TWP.TWP_wait_read   ; state_TWP.TWP_read_set    ; clk          ; clk         ; 0.000        ; 0.065      ; 0.813      ;
+; 0.582 ; TWP_wait_count            ; state_TWP.TWP_read_set    ; clk          ; clk         ; 0.000        ; 0.065      ; 0.815      ;
+; 0.587 ; TWP_data_idx[0]           ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.820      ;
+; 0.589 ; TWP_data_idx[0]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.822      ;
+; 0.591 ; state_TWP.TWP_set         ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.065      ; 0.824      ;
+; 0.598 ; TWP_read_data[3]          ; Register_Spaces[33][3]    ; clk          ; clk         ; 0.000        ; 0.065      ; 0.831      ;
+; 0.608 ; TWP_data_idx[1]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.066      ; 0.842      ;
+; 0.610 ; state_TWP.TWP_gaddr       ; TWP_addr_idx[0]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.843      ;
+; 0.610 ; state_TWP.TWP_read_fetch  ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.065      ; 0.843      ;
+; 0.615 ; state_TWP.TWP_write       ; state_TWP.TWP_write_fetch ; clk          ; clk         ; 0.000        ; 0.065      ; 0.848      ;
+; 0.622 ; state_TWP.TWP_read        ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.855      ;
+; 0.625 ; state_TWP.TWP_read        ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.065      ; 0.858      ;
+; 0.632 ; state_RIM.IDLE            ; state_RIM.RIM_set         ; clk          ; clk         ; 0.000        ; 0.065      ; 0.865      ;
+; 0.637 ; state_TWP.TWP_write       ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.870      ;
+; 0.649 ; state_TWP.IDLE            ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.065      ; 0.882      ;
+; 0.657 ; state_RIM.RIM_read        ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.065      ; 0.890      ;
+; 0.665 ; state_TWP.IDLE            ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.065      ; 0.898      ;
+; 0.691 ; state_TWP.TWP_read_set    ; state_TWP.TWP_read_fetch  ; clk          ; clk         ; 0.000        ; 0.065      ; 0.924      ;
+; 0.702 ; state_TWP.TWP_read        ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.065      ; 0.935      ;
+; 0.711 ; state_TWP.TWP_read        ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.065      ; 0.944      ;
+; 0.721 ; state_TWP.IDLE            ; TWP_data_idx[3]           ; clk          ; clk         ; 0.000        ; 0.065      ; 0.954      ;
+; 0.742 ; TWP_wr                    ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.065      ; 0.975      ;
+; 0.744 ; TWP_addr_idx[2]           ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.065      ; 0.977      ;
+; 0.763 ; TWP_read_data[0]          ; Register_Spaces[92][0]    ; clk          ; clk         ; 0.000        ; 0.066      ; 0.997      ;
+; 0.770 ; TWP_wr                    ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.065      ; 1.003      ;
+; 0.776 ; TWP_read_data[1]          ; Register_Spaces[186][1]   ; clk          ; clk         ; 0.000        ; 0.068      ; 1.012      ;
+; 0.780 ; state_TWP.TWP_gaddr       ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.066      ; 1.014      ;
+; 0.781 ; TWP_read_data[9]          ; Register_Spaces[174][9]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.030      ;
+; 0.791 ; TWP_read_data[9]          ; Register_Spaces[12][9]    ; clk          ; clk         ; 0.000        ; 0.065      ; 1.024      ;
+; 0.793 ; TWP_read_data[9]          ; Register_Spaces[76][9]    ; clk          ; clk         ; 0.000        ; 0.065      ; 1.026      ;
+; 0.795 ; state_TWP.IDLE            ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.065      ; 1.028      ;
+; 0.796 ; TWP_read_data[10]         ; Register_Spaces[157][10]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.045      ;
+; 0.796 ; TWP_read_data[3]          ; Register_Spaces[121][3]   ; clk          ; clk         ; 0.000        ; 0.068      ; 1.032      ;
+; 0.797 ; state_TWP.IDLE            ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.065      ; 1.030      ;
+; 0.814 ; TWP_read_data[5]          ; Register_Spaces[213][5]   ; clk          ; clk         ; 0.000        ; 0.066      ; 1.048      ;
+; 0.839 ; TWP_read_data[4]          ; Register_Spaces[87][4]    ; clk          ; clk         ; 0.000        ; 0.067      ; 1.074      ;
+; 0.839 ; state_TWP.IDLE            ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.065      ; 1.072      ;
+; 0.848 ; TWP_read_data[15]         ; Register_Spaces[118][15]  ; clk          ; clk         ; 0.000        ; 0.067      ; 1.083      ;
+; 0.850 ; TWP_read_data[15]         ; Register_Spaces[101][15]  ; clk          ; clk         ; 0.000        ; 0.066      ; 1.084      ;
+; 0.865 ; TWP_read_data[8]          ; Register_Spaces[32][8]    ; clk          ; clk         ; 0.000        ; 0.069      ; 1.102      ;
+; 0.866 ; TWP_read_data[8]          ; Register_Spaces[78][8]    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.097      ;
+; 0.876 ; TWP_read_data[8]          ; Register_Spaces[58][8]    ; clk          ; clk         ; 0.000        ; 0.070      ; 1.114      ;
+; 0.880 ; TWP_read_data[1]          ; Register_Spaces[180][1]   ; clk          ; clk         ; 0.000        ; 0.050      ; 1.098      ;
+; 0.890 ; TWP_read_data[11]         ; Register_Spaces[163][11]  ; clk          ; clk         ; 0.000        ; 0.068      ; 1.126      ;
+; 0.898 ; state_RIM.RIM_read        ; state_RIM.IDLE            ; clk          ; clk         ; 0.000        ; 0.065      ; 1.131      ;
+; 0.904 ; state_TWP.TWP_gaddr       ; TWP_addr[6]               ; clk          ; clk         ; 0.000        ; 0.067      ; 1.139      ;
+; 0.926 ; TWP_read_data[6]          ; Register_Spaces[160][6]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.175      ;
+; 0.931 ; TWP_addr_idx[1]           ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.065      ; 1.164      ;
+; 0.932 ; state_TWP.TWP_write_fetch ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.065      ; 1.165      ;
+; 0.935 ; TWP_data_idx[2]           ; TWP_data_idx[3]           ; clk          ; clk         ; 0.000        ; 0.066      ; 1.169      ;
+; 0.942 ; TWP_read_data[13]         ; Register_Spaces[22][13]   ; clk          ; clk         ; 0.000        ; 0.064      ; 1.174      ;
+; 0.948 ; TWP_addr[6]               ; TWP_addr[6]               ; clk          ; clk         ; 0.000        ; 0.066      ; 1.182      ;
+; 0.950 ; TWP_data_idx[2]           ; state_TWP.TWP_write_fetch ; clk          ; clk         ; 0.000        ; 0.066      ; 1.184      ;
+; 0.954 ; TWP_addr_idx[2]           ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.065      ; 1.187      ;
+; 0.956 ; state_TWP.TWP_read_set    ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.065      ; 1.189      ;
+; 0.959 ; TWP_data_idx[2]           ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.066      ; 1.193      ;
+; 0.960 ; TWP_data_idx[2]           ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.066      ; 1.194      ;
+; 0.961 ; TWP_read_data[13]         ; Register_Spaces[86][13]   ; clk          ; clk         ; 0.000        ; 0.064      ; 1.193      ;
+; 0.961 ; TWP_addr_idx[1]           ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.065      ; 1.194      ;
+; 0.961 ; TWP_data_idx[2]           ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.066      ; 1.195      ;
+; 0.962 ; TWP_read_data[9]          ; Register_Spaces[17][9]    ; clk          ; clk         ; 0.000        ; 0.070      ; 1.200      ;
+; 0.976 ; TWP_read_data[6]          ; Register_Spaces[76][6]    ; clk          ; clk         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; TWP_addr_idx[0]           ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.066      ; 1.210      ;
+; 0.978 ; TWP_read_data[0]          ; Register_Spaces[76][0]    ; clk          ; clk         ; 0.000        ; 0.066      ; 1.212      ;
+; 0.978 ; TWP_read_data[10]         ; Register_Spaces[4][10]    ; clk          ; clk         ; 0.000        ; 0.063      ; 1.209      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+------------------------------------------------
+; Slow 1200mV -40C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------+
+; Fast 1200mV -40C Model Setup Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; clk   ; 5.058 ; 0.000                ;
++-------+-------+----------------------+
+
+
++-------------------------------------+
+; Fast 1200mV -40C Model Hold Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.176 ; 0.000               ;
++-------+-------+---------------------+
+
+
+-------------------------------------------
+; Fast 1200mV -40C Model Recovery Summary ;
+-------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast 1200mV -40C Model Removal Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Fast 1200mV -40C Model Minimum Pulse Width Summary ;
++-------+-------+------------------------------------+
+; Clock ; Slack ; End Point TNS                      ;
++-------+-------+------------------------------------+
+; clk   ; 4.445 ; 0.000                              ;
++-------+-------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV -40C Model Setup: 'clk'                                                                                  ;
++-------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; 5.058 ; TWP_addr[0] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.060     ; 4.890      ;
+; 5.119 ; TWP_addr[0] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.037     ; 4.852      ;
+; 5.119 ; TWP_addr[0] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.037     ; 4.852      ;
+; 5.121 ; TWP_addr[0] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.076     ; 4.811      ;
+; 5.141 ; TWP_addr[0] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.037     ; 4.830      ;
+; 5.158 ; TWP_addr[5] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.066     ; 4.784      ;
+; 5.180 ; TWP_addr[0] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.064     ; 4.764      ;
+; 5.191 ; TWP_addr[0] ; Register_Spaces[224][1]  ; clk          ; clk         ; 10.000       ; -0.035     ; 4.782      ;
+; 5.191 ; TWP_addr[0] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.047     ; 4.770      ;
+; 5.191 ; TWP_addr[6] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.062     ; 4.755      ;
+; 5.207 ; TWP_addr[2] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.064     ; 4.737      ;
+; 5.216 ; TWP_addr[0] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.753      ;
+; 5.219 ; TWP_addr[5] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.043     ; 4.746      ;
+; 5.219 ; TWP_addr[5] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.043     ; 4.746      ;
+; 5.221 ; TWP_addr[5] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.082     ; 4.705      ;
+; 5.225 ; TWP_addr[0] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.049     ; 4.734      ;
+; 5.225 ; TWP_addr[0] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.049     ; 4.734      ;
+; 5.241 ; TWP_addr[0] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.039     ; 4.728      ;
+; 5.241 ; TWP_addr[5] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.043     ; 4.724      ;
+; 5.245 ; TWP_addr[0] ; Register_Spaces[199][10] ; clk          ; clk         ; 10.000       ; -0.034     ; 4.729      ;
+; 5.246 ; TWP_addr[0] ; Register_Spaces[199][15] ; clk          ; clk         ; 10.000       ; -0.034     ; 4.728      ;
+; 5.248 ; TWP_addr[1] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.062     ; 4.698      ;
+; 5.249 ; TWP_addr[0] ; Register_Spaces[90][14]  ; clk          ; clk         ; 10.000       ; -0.033     ; 4.726      ;
+; 5.252 ; TWP_addr[6] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.717      ;
+; 5.252 ; TWP_addr[6] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.717      ;
+; 5.254 ; TWP_addr[6] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.078     ; 4.676      ;
+; 5.274 ; TWP_addr[6] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.039     ; 4.695      ;
+; 5.277 ; TWP_addr[0] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.064     ; 4.667      ;
+; 5.280 ; TWP_addr[5] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.070     ; 4.658      ;
+; 5.291 ; TWP_addr[0] ; Register_Spaces[173][12] ; clk          ; clk         ; 10.000       ; -0.069     ; 4.648      ;
+; 5.291 ; TWP_addr[5] ; Register_Spaces[224][1]  ; clk          ; clk         ; 10.000       ; -0.041     ; 4.676      ;
+; 5.291 ; TWP_addr[5] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.053     ; 4.664      ;
+; 5.294 ; TWP_addr[0] ; Register_Spaces[94][6]   ; clk          ; clk         ; 10.000       ; -0.036     ; 4.678      ;
+; 5.294 ; TWP_addr[0] ; Register_Spaces[26][9]   ; clk          ; clk         ; 10.000       ; -0.044     ; 4.670      ;
+; 5.294 ; TWP_addr[0] ; Register_Spaces[94][4]   ; clk          ; clk         ; 10.000       ; -0.036     ; 4.678      ;
+; 5.294 ; TWP_addr[0] ; Register_Spaces[94][5]   ; clk          ; clk         ; 10.000       ; -0.036     ; 4.678      ;
+; 5.294 ; TWP_addr[0] ; Register_Spaces[94][7]   ; clk          ; clk         ; 10.000       ; -0.036     ; 4.678      ;
+; 5.294 ; TWP_addr[0] ; Register_Spaces[26][11]  ; clk          ; clk         ; 10.000       ; -0.044     ; 4.670      ;
+; 5.300 ; TWP_addr[2] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.060     ; 4.648      ;
+; 5.304 ; TWP_addr[0] ; Register_Spaces[133][15] ; clk          ; clk         ; 10.000       ; -0.058     ; 4.646      ;
+; 5.304 ; TWP_addr[3] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.062     ; 4.642      ;
+; 5.305 ; TWP_addr[4] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.066     ; 4.637      ;
+; 5.309 ; TWP_addr[1] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.660      ;
+; 5.309 ; TWP_addr[1] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.660      ;
+; 5.311 ; TWP_addr[1] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.078     ; 4.619      ;
+; 5.313 ; TWP_addr[6] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.066     ; 4.629      ;
+; 5.316 ; TWP_addr[5] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.045     ; 4.647      ;
+; 5.319 ; TWP_addr[0] ; Register_Spaces[94][14]  ; clk          ; clk         ; 10.000       ; -0.050     ; 4.639      ;
+; 5.324 ; TWP_addr[6] ; Register_Spaces[224][1]  ; clk          ; clk         ; 10.000       ; -0.037     ; 4.647      ;
+; 5.324 ; TWP_addr[6] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.635      ;
+; 5.325 ; TWP_addr[5] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.055     ; 4.628      ;
+; 5.325 ; TWP_addr[5] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.055     ; 4.628      ;
+; 5.331 ; TWP_addr[1] ; Register_Spaces[81][10]  ; clk          ; clk         ; 10.000       ; -0.039     ; 4.638      ;
+; 5.336 ; TWP_addr[0] ; Register_Spaces[130][9]  ; clk          ; clk         ; 10.000       ; -0.040     ; 4.632      ;
+; 5.337 ; TWP_addr[0] ; Register_Spaces[9][0]    ; clk          ; clk         ; 10.000       ; -0.049     ; 4.622      ;
+; 5.341 ; TWP_addr[5] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.045     ; 4.622      ;
+; 5.345 ; TWP_addr[0] ; Register_Spaces[168][2]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.614      ;
+; 5.345 ; TWP_addr[0] ; Register_Spaces[168][15] ; clk          ; clk         ; 10.000       ; -0.049     ; 4.614      ;
+; 5.345 ; TWP_addr[0] ; Register_Spaces[168][9]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.614      ;
+; 5.345 ; TWP_addr[0] ; Register_Spaces[168][12] ; clk          ; clk         ; 10.000       ; -0.049     ; 4.614      ;
+; 5.345 ; TWP_addr[0] ; Register_Spaces[168][5]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.614      ;
+; 5.345 ; TWP_addr[0] ; Register_Spaces[168][7]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.614      ;
+; 5.345 ; TWP_addr[5] ; Register_Spaces[199][10] ; clk          ; clk         ; 10.000       ; -0.040     ; 4.623      ;
+; 5.346 ; TWP_addr[0] ; Register_Spaces[37][7]   ; clk          ; clk         ; 10.000       ; -0.042     ; 4.620      ;
+; 5.346 ; TWP_addr[5] ; Register_Spaces[199][15] ; clk          ; clk         ; 10.000       ; -0.040     ; 4.622      ;
+; 5.349 ; TWP_addr[6] ; Register_Spaces[90][9]   ; clk          ; clk         ; 10.000       ; -0.041     ; 4.618      ;
+; 5.349 ; TWP_addr[5] ; Register_Spaces[90][14]  ; clk          ; clk         ; 10.000       ; -0.039     ; 4.620      ;
+; 5.352 ; TWP_addr[0] ; Register_Spaces[26][5]   ; clk          ; clk         ; 10.000       ; -0.048     ; 4.608      ;
+; 5.355 ; TWP_addr[0] ; Register_Spaces[1][12]   ; clk          ; clk         ; 10.000       ; -0.060     ; 4.593      ;
+; 5.358 ; TWP_addr[0] ; Register_Spaces[168][4]  ; clk          ; clk         ; 10.000       ; -0.061     ; 4.589      ;
+; 5.358 ; TWP_addr[6] ; Register_Spaces[42][9]   ; clk          ; clk         ; 10.000       ; -0.051     ; 4.599      ;
+; 5.358 ; TWP_addr[6] ; Register_Spaces[42][5]   ; clk          ; clk         ; 10.000       ; -0.051     ; 4.599      ;
+; 5.359 ; TWP_addr[0] ; Register_Spaces[179][6]  ; clk          ; clk         ; 10.000       ; -0.046     ; 4.603      ;
+; 5.359 ; TWP_addr[0] ; Register_Spaces[179][12] ; clk          ; clk         ; 10.000       ; -0.046     ; 4.603      ;
+; 5.359 ; TWP_addr[0] ; Register_Spaces[179][8]  ; clk          ; clk         ; 10.000       ; -0.046     ; 4.603      ;
+; 5.361 ; TWP_addr[2] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.037     ; 4.610      ;
+; 5.361 ; TWP_addr[2] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.037     ; 4.610      ;
+; 5.362 ; TWP_addr[0] ; Register_Spaces[71][9]   ; clk          ; clk         ; 10.000       ; -0.075     ; 4.571      ;
+; 5.363 ; TWP_addr[0] ; Register_Spaces[94][3]   ; clk          ; clk         ; 10.000       ; -0.058     ; 4.587      ;
+; 5.363 ; TWP_addr[0] ; Register_Spaces[137][7]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.596      ;
+; 5.363 ; TWP_addr[2] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.076     ; 4.569      ;
+; 5.365 ; TWP_addr[2] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.047     ; 4.596      ;
+; 5.365 ; TWP_addr[7] ; Register_Spaces[34][8]   ; clk          ; clk         ; 10.000       ; -0.062     ; 4.581      ;
+; 5.365 ; TWP_addr[3] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.604      ;
+; 5.365 ; TWP_addr[3] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.039     ; 4.604      ;
+; 5.366 ; TWP_addr[4] ; Register_Spaces[81][2]   ; clk          ; clk         ; 10.000       ; -0.043     ; 4.599      ;
+; 5.366 ; TWP_addr[4] ; Register_Spaces[81][1]   ; clk          ; clk         ; 10.000       ; -0.043     ; 4.599      ;
+; 5.367 ; TWP_addr[3] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.078     ; 4.563      ;
+; 5.368 ; TWP_addr[0] ; Register_Spaces[153][14] ; clk          ; clk         ; 10.000       ; -0.055     ; 4.585      ;
+; 5.368 ; TWP_addr[4] ; Register_Spaces[168][0]  ; clk          ; clk         ; 10.000       ; -0.082     ; 4.558      ;
+; 5.370 ; TWP_addr[1] ; Register_Spaces[34][12]  ; clk          ; clk         ; 10.000       ; -0.066     ; 4.572      ;
+; 5.374 ; TWP_addr[6] ; Register_Spaces[122][9]  ; clk          ; clk         ; 10.000       ; -0.041     ; 4.593      ;
+; 5.376 ; TWP_addr[0] ; Register_Spaces[209][15] ; clk          ; clk         ; 10.000       ; -0.059     ; 4.573      ;
+; 5.376 ; TWP_addr[0] ; Register_Spaces[209][13] ; clk          ; clk         ; 10.000       ; -0.059     ; 4.573      ;
+; 5.376 ; TWP_addr[0] ; Register_Spaces[37][4]   ; clk          ; clk         ; 10.000       ; -0.050     ; 4.582      ;
+; 5.377 ; TWP_addr[5] ; Register_Spaces[31][12]  ; clk          ; clk         ; 10.000       ; -0.070     ; 4.561      ;
+; 5.378 ; TWP_addr[6] ; Register_Spaces[199][10] ; clk          ; clk         ; 10.000       ; -0.036     ; 4.594      ;
+; 5.379 ; TWP_addr[6] ; Register_Spaces[199][15] ; clk          ; clk         ; 10.000       ; -0.036     ; 4.593      ;
+; 5.381 ; TWP_addr[1] ; Register_Spaces[224][1]  ; clk          ; clk         ; 10.000       ; -0.037     ; 4.590      ;
+; 5.381 ; TWP_addr[1] ; Register_Spaces[137][1]  ; clk          ; clk         ; 10.000       ; -0.049     ; 4.578      ;
++-------+-------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV -40C Model Hold: 'clk'                                                                                                  ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.176 ; TWP_read_data[7]          ; TWP_read_data[7]          ; clk          ; clk         ; 0.000        ; 0.038      ; 0.296      ;
+; 0.176 ; TWP_addr[7]               ; TWP_addr[7]               ; clk          ; clk         ; 0.000        ; 0.038      ; 0.296      ;
+; 0.176 ; TWP_read_data[9]          ; TWP_read_data[9]          ; clk          ; clk         ; 0.000        ; 0.038      ; 0.296      ;
+; 0.176 ; TWP_read_data[13]         ; TWP_read_data[13]         ; clk          ; clk         ; 0.000        ; 0.038      ; 0.296      ;
+; 0.176 ; TWP_read_data[10]         ; TWP_read_data[10]         ; clk          ; clk         ; 0.000        ; 0.038      ; 0.296      ;
+; 0.176 ; TWP_read_data[6]          ; TWP_read_data[6]          ; clk          ; clk         ; 0.000        ; 0.038      ; 0.296      ;
+; 0.177 ; TWP_read_data[4]          ; TWP_read_data[4]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[5]          ; TWP_read_data[5]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[11]         ; TWP_read_data[11]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; cfg_rdy~reg0              ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[0]          ; TWP_read_data[0]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_wr                    ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_addr[3]               ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_addr[1]               ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[12]         ; TWP_read_data[12]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[1]          ; TWP_read_data[1]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[3]          ; TWP_read_data[3]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[15]         ; TWP_read_data[15]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[14]         ; TWP_read_data[14]         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_read_data[2]          ; TWP_read_data[2]          ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; state_TWP.TWP_read        ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_wait_count            ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_addr_idx[1]           ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_addr_idx[2]           ; TWP_addr_idx[2]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_data_idx[2]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_data_idx[1]           ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_data_idx[0]           ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; TWP_addr_idx[0]           ; TWP_addr_idx[0]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; state_TWP.TWP_wait_read   ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; state_TWP.TWP_write       ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.178 ; TWP_read_data[8]          ; TWP_read_data[8]          ; clk          ; clk         ; 0.000        ; 0.036      ; 0.296      ;
+; 0.188 ; state_TWP.TWP_wait_read   ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.191 ; TWP_wait_count            ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.310      ;
+; 0.195 ; state_RIM.RIM_set         ; state_RIM.RIM_read        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.197 ; state_RIM.RIM_set         ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.316      ;
+; 0.278 ; TWP_wait_count            ; state_TWP.TWP_read_set    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.397      ;
+; 0.279 ; state_TWP.TWP_wait_read   ; state_TWP.TWP_read_set    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.398      ;
+; 0.282 ; TWP_data_idx[0]           ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.401      ;
+; 0.283 ; TWP_data_idx[0]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.402      ;
+; 0.286 ; state_TWP.TWP_set         ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.405      ;
+; 0.289 ; TWP_read_data[3]          ; Register_Spaces[33][3]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.408      ;
+; 0.294 ; state_TWP.TWP_read_fetch  ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.413      ;
+; 0.294 ; TWP_data_idx[1]           ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.413      ;
+; 0.295 ; state_TWP.TWP_gaddr       ; TWP_addr_idx[0]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.414      ;
+; 0.297 ; state_TWP.TWP_read        ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.416      ;
+; 0.301 ; state_TWP.TWP_write       ; state_TWP.TWP_write_fetch ; clk          ; clk         ; 0.000        ; 0.037      ; 0.420      ;
+; 0.304 ; state_TWP.TWP_read        ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.423      ;
+; 0.308 ; state_RIM.IDLE            ; state_RIM.RIM_set         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.308 ; state_TWP.TWP_write       ; TWP_data_idx[0]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.319 ; state_TWP.TWP_read_set    ; state_TWP.TWP_read_fetch  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.438      ;
+; 0.319 ; state_RIM.RIM_read        ; cfg_rdy~reg0              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.438      ;
+; 0.321 ; state_TWP.IDLE            ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.440      ;
+; 0.326 ; state_TWP.IDLE            ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.445      ;
+; 0.332 ; state_TWP.IDLE            ; TWP_data_idx[3]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.451      ;
+; 0.345 ; state_TWP.TWP_read        ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.464      ;
+; 0.347 ; TWP_wr                    ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.466      ;
+; 0.353 ; state_TWP.TWP_read        ; TWP_wr                    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.472      ;
+; 0.369 ; TWP_wr                    ; state_TWP.TWP_wait_read   ; clk          ; clk         ; 0.000        ; 0.037      ; 0.488      ;
+; 0.371 ; TWP_read_data[9]          ; Register_Spaces[76][9]    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.491      ;
+; 0.373 ; TWP_read_data[9]          ; Register_Spaces[12][9]    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.493      ;
+; 0.375 ; TWP_read_data[0]          ; Register_Spaces[92][0]    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.495      ;
+; 0.377 ; state_TWP.IDLE            ; TWP_data_idx[1]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.496      ;
+; 0.379 ; state_TWP.IDLE            ; TWP_data_idx[2]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.498      ;
+; 0.380 ; TWP_read_data[1]          ; Register_Spaces[186][1]   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.502      ;
+; 0.387 ; TWP_read_data[9]          ; Register_Spaces[174][9]   ; clk          ; clk         ; 0.000        ; 0.048      ; 0.517      ;
+; 0.388 ; TWP_addr_idx[2]           ; TWP_addr[1]               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.507      ;
+; 0.389 ; state_TWP.TWP_gaddr       ; TWP_addr_idx[1]           ; clk          ; clk         ; 0.000        ; 0.039      ; 0.510      ;
+; 0.390 ; TWP_read_data[3]          ; Register_Spaces[121][3]   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.512      ;
+; 0.393 ; TWP_read_data[5]          ; Register_Spaces[213][5]   ; clk          ; clk         ; 0.000        ; 0.038      ; 0.513      ;
+; 0.398 ; TWP_read_data[10]         ; Register_Spaces[157][10]  ; clk          ; clk         ; 0.000        ; 0.048      ; 0.528      ;
+; 0.405 ; TWP_read_data[15]         ; Register_Spaces[118][15]  ; clk          ; clk         ; 0.000        ; 0.038      ; 0.525      ;
+; 0.413 ; TWP_read_data[4]          ; Register_Spaces[87][4]    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.536      ;
+; 0.419 ; TWP_read_data[15]         ; Register_Spaces[101][15]  ; clk          ; clk         ; 0.000        ; 0.038      ; 0.539      ;
+; 0.423 ; TWP_read_data[11]         ; Register_Spaces[163][11]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.544      ;
+; 0.423 ; state_TWP.IDLE            ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.542      ;
+; 0.430 ; TWP_read_data[8]          ; Register_Spaces[78][8]    ; clk          ; clk         ; 0.000        ; 0.035      ; 0.547      ;
+; 0.432 ; TWP_read_data[8]          ; Register_Spaces[32][8]    ; clk          ; clk         ; 0.000        ; 0.040      ; 0.554      ;
+; 0.436 ; TWP_read_data[8]          ; Register_Spaces[58][8]    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.559      ;
+; 0.436 ; state_TWP.TWP_gaddr       ; TWP_addr[6]               ; clk          ; clk         ; 0.000        ; 0.039      ; 0.557      ;
+; 0.442 ; state_RIM.RIM_read        ; state_RIM.IDLE            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.561      ;
+; 0.447 ; TWP_read_data[6]          ; Register_Spaces[160][6]   ; clk          ; clk         ; 0.000        ; 0.048      ; 0.577      ;
+; 0.448 ; TWP_read_data[1]          ; Register_Spaces[180][1]   ; clk          ; clk         ; 0.000        ; 0.022      ; 0.552      ;
+; 0.451 ; state_TWP.TWP_write_fetch ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.570      ;
+; 0.452 ; TWP_data_idx[2]           ; state_TWP.TWP_write_fetch ; clk          ; clk         ; 0.000        ; 0.037      ; 0.571      ;
+; 0.452 ; TWP_addr[6]               ; TWP_addr[6]               ; clk          ; clk         ; 0.000        ; 0.038      ; 0.572      ;
+; 0.455 ; TWP_data_idx[2]           ; state_TWP.TWP_read        ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.456 ; TWP_data_idx[2]           ; state_TWP.TWP_write       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.457 ; TWP_data_idx[2]           ; state_TWP.IDLE            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.576      ;
+; 0.458 ; TWP_data_idx[2]           ; TWP_data_idx[3]           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.577      ;
+; 0.460 ; TWP_read_data[13]         ; Register_Spaces[86][13]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.461 ; TWP_addr_idx[1]           ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.580      ;
+; 0.461 ; TWP_addr_idx[2]           ; TWP_addr[3]               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.580      ;
+; 0.462 ; TWP_read_data[13]         ; Register_Spaces[22][13]   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.580      ;
+; 0.465 ; state_TWP.TWP_read_set    ; TWP_wait_count            ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.466 ; TWP_read_data[9]          ; Register_Spaces[17][9]    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.590      ;
+; 0.468 ; TWP_read_data[0]          ; Register_Spaces[76][0]    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.588      ;
+; 0.469 ; TWP_read_data[3]          ; Register_Spaces[114][3]   ; clk          ; clk         ; 0.000        ; 0.046      ; 0.597      ;
+; 0.469 ; state_TWP.TWP_read_fetch  ; state_TWP.TWP_set         ; clk          ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.473 ; TWP_read_data[6]          ; Register_Spaces[76][6]    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.593      ;
+; 0.474 ; TWP_read_data[3]          ; Register_Spaces[34][3]    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.598      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+------------------------------------------------
+; Fast 1200mV -40C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.004 ; 0.176 ; N/A      ; N/A     ; 4.445               ;
+;  clk             ; -0.004 ; 0.176 ; N/A      ; N/A     ; 4.445               ;
+; Design-wide TNS  ; -0.004 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; -0.004 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; cfg_rdy       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[7]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[8]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[9]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[10] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[11] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[12] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[13] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[14] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cfg_rdata[15] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SDA           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; SCL                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SDA                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset_n                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[4]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[3]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[5]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[1]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[0]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[2]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[7]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_addr[6]             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_req                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_cmd                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[1]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[2]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[3]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[4]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[5]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[6]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[7]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[8]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[9]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[10]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[11]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[12]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[13]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[14]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; cfg_wdata[15]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; cfg_rdy       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.34 V              ; -0.00643 V          ; 0.21 V                               ; 0.072 V                              ; 2.63e-09 s                  ; 2.47e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.34 V             ; -0.00643 V         ; 0.21 V                              ; 0.072 V                             ; 2.63e-09 s                 ; 2.47e-09 s                 ; No                        ; Yes                       ;
+; cfg_rdata[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; cfg_rdata[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; cfg_rdata[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; cfg_rdata[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; SDA           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-09 V                   ; 2.39 V              ; -0.0798 V           ; 0.13 V                               ; 0.103 V                              ; 2.71e-10 s                  ; 2.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-09 V                  ; 2.39 V             ; -0.0798 V          ; 0.13 V                              ; 0.103 V                             ; 2.71e-10 s                 ; 2.5e-10 s                  ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.64e-09 V                   ; 2.39 V              ; -0.00331 V          ; 0.132 V                              ; 0.006 V                              ; 4.59e-10 s                  ; 5.62e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.64e-09 V                  ; 2.39 V             ; -0.00331 V         ; 0.132 V                             ; 0.006 V                             ; 4.59e-10 s                 ; 5.62e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 125c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; cfg_rdy       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.33 V              ; -0.00204 V          ; 0.094 V                              ; 0.055 V                              ; 3.78e-09 s                  ; 3.62e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.33 V             ; -0.00204 V         ; 0.094 V                             ; 0.055 V                             ; 3.78e-09 s                 ; 3.62e-09 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.91e-06 V                   ; 2.34 V              ; -0.0096 V           ; 0.063 V                              ; 0.023 V                              ; 6.92e-10 s                  ; 6.75e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.91e-06 V                  ; 2.34 V             ; -0.0096 V          ; 0.063 V                             ; 0.023 V                             ; 6.92e-10 s                 ; 6.75e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.91e-06 V                   ; 2.34 V              ; -0.0096 V           ; 0.063 V                              ; 0.023 V                              ; 6.92e-10 s                  ; 6.75e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.91e-06 V                  ; 2.34 V             ; -0.0096 V          ; 0.063 V                             ; 0.023 V                             ; 6.92e-10 s                 ; 6.75e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.91e-06 V                   ; 2.34 V              ; -0.0096 V           ; 0.063 V                              ; 0.023 V                              ; 6.92e-10 s                  ; 6.75e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.91e-06 V                  ; 2.34 V             ; -0.0096 V          ; 0.063 V                             ; 0.023 V                             ; 6.92e-10 s                 ; 6.75e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; SDA           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.32e-06 V                   ; 2.35 V              ; -0.0124 V           ; 0.057 V                              ; 0.05 V                               ; 4.87e-10 s                  ; 5.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.32e-06 V                  ; 2.35 V             ; -0.0124 V          ; 0.057 V                             ; 0.05 V                              ; 4.87e-10 s                 ; 5.02e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.33e-06 V                   ; 2.35 V              ; -0.00598 V          ; 0.095 V                              ; 0.012 V                              ; 4.54e-10 s                  ; 3.98e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.33e-06 V                  ; 2.35 V             ; -0.00598 V         ; 0.095 V                             ; 0.012 V                             ; 4.54e-10 s                 ; 3.98e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.86e-06 V                   ; 2.34 V              ; -0.00776 V          ; 0.107 V                              ; 0.033 V                              ; 6.63e-10 s                  ; 8.55e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.86e-06 V                  ; 2.34 V             ; -0.00776 V         ; 0.107 V                             ; 0.033 V                             ; 6.63e-10 s                 ; 8.55e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; cfg_rdy       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.65 V              ; -0.0147 V           ; 0.207 V                              ; 0.176 V                              ; 2.16e-09 s                  ; 2.03e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.65 V             ; -0.0147 V          ; 0.207 V                             ; 0.176 V                             ; 2.16e-09 s                 ; 2.03e-09 s                 ; No                        ; Yes                       ;
+; cfg_rdata[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; cfg_rdata[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; cfg_rdata[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; cfg_rdata[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; cfg_rdata[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; SDA           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.87e-09 V                   ; 2.79 V              ; -0.0524 V           ; 0.19 V                               ; 0.066 V                              ; 2.63e-10 s                  ; 1.96e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.87e-09 V                  ; 2.79 V             ; -0.0524 V          ; 0.19 V                              ; 0.066 V                             ; 2.63e-10 s                 ; 1.96e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.91e-09 V                   ; 2.73 V              ; -0.0159 V           ; 0.231 V                              ; 0.026 V                              ; 2.89e-10 s                  ; 4.54e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.91e-09 V                  ; 2.73 V             ; -0.0159 V          ; 0.231 V                             ; 0.026 V                             ; 2.89e-10 s                 ; 4.54e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 169151   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 169151   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++-------------------------------------------------+
+; Unconstrained Paths Summary                     ;
++---------------------------------+-------+-------+
+; Property                        ; Setup ; Hold  ;
++---------------------------------+-------+-------+
+; Illegal Clocks                  ; 0     ; 0     ;
+; Unconstrained Clocks            ; 0     ; 0     ;
+; Unconstrained Input Ports       ; 27    ; 27    ;
+; Unconstrained Input Port Paths  ; 41158 ; 41158 ;
+; Unconstrained Output Ports      ; 18    ; 18    ;
+; Unconstrained Output Port Paths ; 39    ; 39    ;
++---------------------------------+-------+-------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; cfg_addr[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[4]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_cmd       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_req       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[8]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[10] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[11] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[12] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[13] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[14] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[15] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_n       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; SDA           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdy       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; cfg_addr[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[3]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[4]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_addr[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_cmd       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_req       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[8]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[10] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[11] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[12] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[13] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[14] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_wdata[15] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_n       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; SDA           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdata[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cfg_rdy       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Sep 09 17:18:40 2023
+Info: Command: quartus_sta TPA -c TPA
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Info (332104): Reading SDC File: 'TPA.sdc'
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 125C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.004
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.004              -0.004 clk 
+Info (332146): Worst-case hold slack is 0.423
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.423               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.737
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.737               0.000 clk 
+Info: Analyzing Slow 1200mV -40C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 0.991
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.991               0.000 clk 
+Info (332146): Worst-case hold slack is 0.340
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.340               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.776
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.776               0.000 clk 
+Info: Analyzing Fast 1200mV -40C Model
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 5.058
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     5.058               0.000 clk 
+Info (332146): Worst-case hold slack is 0.176
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.176               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.445
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.445               0.000 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4906 megabytes
+    Info: Processing ended: Sat Sep 09 17:18:47 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
+
+

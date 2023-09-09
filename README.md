@@ -1,6 +1,6 @@
 # IC_learning
 
-## folder explanation
+## Folder explanation
 
 ```
 ├───IC design contest
