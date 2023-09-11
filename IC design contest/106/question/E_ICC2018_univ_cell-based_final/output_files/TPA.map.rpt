@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TPA
-Sat Sep 09 17:14:57 2023
+Mon Sep 11 12:17:37 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 09 17:14:56 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 11 12:17:36 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TPA                                         ;
 ; Top-level Entity Name              ; TPA                                         ;
@@ -595,7 +595,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:28     ;
+; Top            ; 00:00:29     ;
 +----------------+--------------+
 
 
@@ -605,7 +605,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 09 17:14:12 2023
+    Info: Processing started: Mon Sep 11 12:16:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TPA -c TPA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -613,7 +613,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file tpa.v
     Info (12023): Found entity 1: TPA File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 1
 Info (12127): Elaborating entity "TPA" for the top level hierarchy
 Info (10264): Verilog HDL Case Statement information at TPA.v(67): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 67
-Info (10264): Verilog HDL Case Statement information at TPA.v(135): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 135
+Info (10264): Verilog HDL Case Statement information at TPA.v(199): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 199
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "SDA_reg~0" feeding internal logic into a wire File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 27
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
@@ -634,9 +634,9 @@ Info (21057): Implemented 10356 device resources after synthesis - the final res
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 10309 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Sat Sep 09 17:14:57 2023
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Mon Sep 11 12:17:37 2023
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:52
 
 

@@ -110,6 +110,7 @@ assign SDA=(state_TWP == TWP_read) ? TWP_read_data[TWP_data_idx] :
            (state_TWP == TWP_wait_read) ? 1'b1 :
            (state_TWP == TWP_read_fetch) ? 1'b0 : SDA_reg;
 
+
 //output logic block
 always@(posedge clk or negedge reset_n)
 begin
