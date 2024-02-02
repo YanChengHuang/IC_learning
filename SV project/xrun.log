@@ -1,0 +1,32 @@
+xrun: 20.09-s003: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun	20.09-s003: Started on Jan 30, 2024 at 00:25:13 EST
+xrun
+	-Q
+	-unbuffered
+	-timescale 1ns/1ns
+	-sysv
+	-access +rw
+	design.sv
+	testbench.sv
+      extern function new();
+                        |
+xmvlog: *E,PMBNOB (tb_component.sv,25|24): An implementation body was not found for the indicated task or function prototype.
+(`include file: tb_component.sv line 30, `include file: test.sv line 1, `include file: tb.svh line 4, file: testbench.sv line 1)
+      extern virtual function bit copy(input BaseTr to=null);
+                                     |
+xmvlog: *E,PMBNOB (tb_component.sv,26|37): An implementation body was not found for the indicated task or function prototype.
+(`include file: tb_component.sv line 30, `include file: test.sv line 1, `include file: tb.svh line 4, file: testbench.sv line 1)
+      extern virtual function void display(input string prefix="");      
+                                         |
+xmvlog: *E,PMBNOB (tb_component.sv,27|41): An implementation body was not found for the indicated task or function prototype.
+(`include file: tb_component.sv line 30, `include file: test.sv line 1, `include file: tb.svh line 4, file: testbench.sv line 1)
+  import tb_component::*;
+                    |
+xmvlog: *E,NOPBIND (test.sv,4|20): Package tb_component could not be bound.
+(`include file: test.sv line 7, `include file: tb.svh line 4, file: testbench.sv line 1)
+endmodule;
+         |
+xmvlog: *W,UEXPSC (test.sv,11|9): Ignored unexpected semicolon following SystemVerilog description keyword (endmodule).
+(`include file: test.sv line 11, `include file: tb.svh line 4, file: testbench.sv line 1)
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun	20.09-s003: Exiting on Jan 30, 2024 at 00:25:13 EST  (total: 00:00:00)

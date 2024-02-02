@@ -32,3 +32,6 @@ Folder structure
             └────lab1-5_develop_history
   
 ```
+
+## New folder - SV project
+SV project is the project I try to improve the Year 106 contest question(LCD_CTRL) testbench. Let the original testbench become more reuseable and scalable by using the concept of OOP in systemverilog.

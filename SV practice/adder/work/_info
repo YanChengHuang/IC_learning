@@ -1,0 +1,156 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/IC self_learning/SV practice/adder
+Xexercise10_sv_unit
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1705454781
+VVP>o[eR9ENH=ThIQRE2Ud3
+r1
+!s85 0
+!i10b 1
+!s100 a4aS41edoFEKA2:;UR^k<1
+IVP>o[eR9ENH=ThIQRE2Ud3
+!i103 1
+S1
+R0
+w1705454780
+8.\exercise10.sv
+F.\exercise10.sv
+!i122 152
+L0 10 0
+Z2 OV;L;2020.1;71
+31
+!s108 1705454781.000000
+!s107 .\exercise10.sv|
+!s90 .\exercise10.sv|
+!i113 1
+Z3 tCvgOpt 0
+vMMS_2num
+Z4 !s110 1704687119
+!i10b 1
+!s100 ZV>lg3mQBnCWbKc9Lb8043
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?:9nH5]Pein>4IZT0KW;P0
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1704240179
+8MMS.v
+FMMS.v
+!i122 143
+L0 1 24
+R2
+r1
+!s85 0
+31
+Z7 !s108 1704687119.000000
+Z8 !s107 .\transaction.svh|interface.sv|top.sv|tb.sv|MMS.v|
+Z9 !s90 MMS.v|tb.sv|top.sv|interface.sv|.\transaction.svh|
+!i113 1
+R3
+n@m@m@s_2num
+YMMS_if
+R1
+R4
+!i10b 1
+!s100 BaC;m8hCOSz=2aCj8Ugb^2
+R5
+IJ8@N4mPTRbHCh`O0iH;Go1
+R6
+S1
+R0
+w1704260740
+8interface.sv
+Finterface.sv
+!i122 143
+Z10 L0 1 0
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+n@m@m@s_if
+vtb
+R1
+DXx4 work 10 tb_oponent 0 22 T@Z_@:hFn7F^mM@I`305G3
+Z11 !s110 1705551287
+!i10b 1
+!s100 z8DGB@DenC`i[K4B;kDC_1
+R5
+II>WNHIDKWi75FQ8G4M9EL0
+R6
+S1
+R0
+Z12 w1705551285
+Z13 8.\exercise8_1.sv
+Z14 F.\exercise8_1.sv
+!i122 156
+L0 50 18
+R2
+r1
+!s85 0
+31
+Z15 !s108 1705551286.000000
+!s107 .\exercise8_1.sv|
+Z16 !s90 .\exercise8_1.sv|
+!i113 1
+R3
+Xtb_oponent
+R1
+R11
+!i10b 1
+!s100 0<:fkzm<h6ZP@6R0SIjJ21
+R5
+IT@Z_@:hFn7F^mM@I`305G3
+VT@Z_@:hFn7F^mM@I`305G3
+S1
+R0
+R12
+R13
+R14
+!i122 156
+R10
+R2
+r1
+!s85 0
+31
+R15
+Z17 !s107 .\exercise8_1.sv|
+R16
+!i113 1
+R3
+vtop
+R1
+R4
+!i10b 1
+!s100 3SAg`RHU0X7eKVlkIMe5D1
+R5
+I7TA]kk_7Fn;3lOGhJbVVC1
+R6
+S1
+R0
+w1704260709
+8top.sv
+Ftop.sv
+!i122 143
+L0 3 12
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
