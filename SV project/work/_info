@@ -10,28 +10,28 @@ cModel Technology
 Z0 dC:/Users/User/Desktop/result
 vLCD_CTRL
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1706846767
+Z2 !s110 1707134358
 !i10b 1
-!s100 SfhzE7=>o;nXOlfWMj;2C3
+!s100 i3;g;mCIEDgiWzfbRKehc1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IIkM;mEL9a`9>l>P0W69Ha0
+IS6:YIJQ7EYH5EPKFAg5CR3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1706846758
+Z5 w1706807248
 8LCD_CTRL.v
-Z5 FLCD_CTRL.v
-!i122 25
+Z6 FLCD_CTRL.v
+!i122 73
 L0 2 191
-Z6 OV;L;2020.1;71
+Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1706846767.000000
-Z8 !s107 MMS_2num.v|MMS_4num.v|LCD_CTRL.v|tb_component.sv|test.sv|interface.sv|tb.svh|.\testbench.sv|
-Z9 !s90 .\testbench.sv|
+Z8 !s108 1707134358.000000
+Z9 !s107 MMS_2num.v|MMS_4num.v|LCD_CTRL.v|tb_component.sv|test.sv|interface.sv|tb.svh|.\testbench.sv|
+Z10 !s90 .\testbench.sv|
 !i113 1
-Z10 tCvgOpt 0
+Z11 tCvgOpt 0
 n@l@c@d_@c@t@r@l
 YLCD_if
 R1
@@ -43,20 +43,20 @@ IX^;>CRJmmF7bUh?>3h4740
 R4
 S1
 R0
-Z11 w1706725744
+R5
 8interface.sv
 Z12 Finterface.sv
-!i122 25
+!i122 73
 L0 1 0
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 n@l@c@d_if
 vMMS_2num
 R1
@@ -68,20 +68,20 @@ Ifad2kRlH4AAk[KFjN]nbT2
 R4
 S1
 R0
-R11
+R5
 8MMS_2num.v
 Z13 FMMS_2num.v
-!i122 25
+!i122 73
 L0 1 26
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 n@m@m@s_2num
 vMMS_4num
 R1
@@ -93,71 +93,71 @@ I?5kLSLhzG07cC5zLiZ3:D3
 R4
 S1
 R0
-R11
+R5
 8MMS_4num.v
 Z14 FMMS_4num.v
-!i122 25
+!i122 73
 L0 2 18
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 n@m@m@s_4num
 Xtb_component
 Z15 !s115 LCD_if
 R1
 R2
 !i10b 1
-!s100 j2ME3U@KBD^?C:W41j`;63
+!s100 kzRc3G=BS^<Xz^W]z0ZMz0
 R3
-I5HAGJ@kSjQ5;A>D_[I=NB2
-V5HAGJ@kSjQ5;A>D_[I=NB2
+IzzHA_S0e[f=oc@BXb7PQN3
+VzzHA_S0e[f=oc@BXb7PQN3
 S1
 R0
-w1706844455
+w1707134355
 8tb_component.sv
 Z16 Ftb_component.sv
-!i122 25
-L0 11 0
-R6
+!i122 73
+L0 10 0
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 4test
 R1
-DXx4 work 12 tb_component 0 22 5HAGJ@kSjQ5;A>D_[I=NB2
+DXx4 work 12 tb_component 0 22 zzHA_S0e[f=oc@BXb7PQN3
 R2
 !i10b 1
-!s100 SORePmHPcVEXPOZ@;d`5[0
+!s100 d68`TIG>S4C0`J0TAdISm0
 R3
-I<0m=e3EDbjFmRm`H<GdHB0
+ImA7UCJ<J9UhmT]WnP:9Co3
 R4
 S1
 R0
-R11
+w1707133276
 8test.sv
 Z17 Ftest.sv
-!i122 25
+!i122 73
 L0 3 0
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 Xtestbench_sv_unit
 R15
 R1
@@ -178,18 +178,18 @@ Ftb.svh
 R12
 R17
 R16
-R5
+R6
 R14
 R13
 !i122 11
 L0 21 0
-R6
+R7
 31
 !s108 1706704851.000000
-R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 vtop
 R1
 R2
@@ -200,17 +200,17 @@ In3CRZ]<QN[;JiUJNzMVNF0
 R4
 S1
 R0
-R11
+R5
 R18
 R19
-!i122 25
+!i122 73
 L0 3 36
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
