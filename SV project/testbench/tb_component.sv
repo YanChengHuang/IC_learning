@@ -12,10 +12,11 @@ package tb_component;
 	typedef virtual LCD_if.TEST LCDifTest;
 	typedef class Driver_cb;
 	typedef class Monitor_cb;
-	typedef bit [7:0] img_data;
-	typedef img_data Img [0:63];
+	typedef bit [`WORD_LENGTH-1:0] img_data;
+    typedef img_data img_t [0:`PIXEL_NUM-1];
+	typedef bit[`CMD_LENGTH-1:0] cmd_t;
 
-	import "DPI-C" function Img LCD_CTRL_CPP(input Img generated_img, input bit [3:0] cmd[]);
+    import "DPI-C" function void LCD_CTRL_C (input img_t generated_img, input cmd_t cmd[], output img_t expected_img);
 
 
 	virtual class BaseTr;
@@ -31,8 +32,8 @@ package tb_component;
 	endclass: BaseTr
       
  	class Transaction extends BaseTr;
-		rand Img image; // 8 bits 8*8 image with no constraint
-		rand bit [3:0] cmd []; // cmd array
+		rand img_t image; // 8 bits 8*8 image with no constraint
+		rand cmd_t cmd []; // cmd array
 		
 		constraint c_cmd{
           cmd.size() inside {[0:62]}; // The size of the cmd array should be larger than 0 and its size should not exceed 63.
@@ -58,25 +59,25 @@ package tb_component;
 		endfunction: copy
 
 		virtual function void display(input string prefix="");
-			$display("%s Transaction %0d:", prefix, id);
+			$display("%s, Transaction %0d:", prefix, id);
          	$display("image: ");
-			for(int i=0;i<8;i++) begin
-        		for(int j=0;j<8;j++) $write("%3d ", image[i*8+j]);
+			for(int i=0;i<`IMG_WIDTH;i++) begin
+        		for(int j=0;j<`IMG_WIDTH;j++) $write("%3d ", image[i*(`IMG_WIDTH)+j]);
 					$display();
 			end	
-			$display("sub cmd in cmd array ");
+			$display("cmd in cmd array ");
           foreach(cmd[i]) $write("%2h ", cmd[i]);
-          $display("\n size of cmd array %0d", cmd.size());
+          $display("\nSize of cmd array %0d", cmd.size());
 		endfunction: display
     endclass: Transaction
 
 	class Generator;
 		Transaction blueprint;
-		mailbox gen2drv;
+		mailbox #(Transaction) gen2drv;
 		event drv2gen;
 		int nImages; // How many images for this generator to create
 		
-		function new(input mailbox gen2drv, 
+		function new(input mailbox #(Transaction) gen2drv, 
 					 input event drv2gen,
 					 input int nImages);
 			this.gen2drv = gen2drv;
@@ -90,21 +91,21 @@ package tb_component;
 			repeat(nImages) begin
 				`SV_RAND_CHECK(blueprint.randomize());
 				$cast(cp, blueprint.copy());
-				cp.display($sformatf("time: %t ",$time));
+				cp.display($sformatf("Time: %0t",$time));
 				gen2drv.put(cp);
-				@drv2gen; // Wait for driver to with finish it
+				@drv2gen; // Wait for driver to finish it
 			end
 		endtask: run
 	endclass: Generator
 	
 	class Driver;
-		mailbox gen2drv;
+		mailbox #(Transaction) gen2drv;
 		event drv2gen;
 		LCDifTest LCDif;
-		bit [5:0] cmd_length;
+		int cmd_idx;
 		Driver_cb cb;
 
-		function new(input mailbox gen2drv,
+		function new(input mailbox #(Transaction) gen2drv,
 							input event drv2gen,
 							input LCDifTest LCDif);
 			this.gen2drv = gen2drv;
@@ -128,7 +129,7 @@ package tb_component;
 					@(posedge LCDif.cb.done);
 					cb.post_transmit(this, tr.image, tr.cmd);
 					gen2drv.get(tr);
-					cmd_length = 0;
+					cmd_idx = 0;
 					->drv2gen;
 				end
 			join
@@ -141,11 +142,11 @@ package tb_component;
 		endtask: send_image
 
 		task send_cmd(input Transaction tr);
-			if(cmd_length < tr.cmd.size()) begin
+			if(cmd_idx < tr.cmd.size()) begin
 				if(!LCDif.cb.busy && !LCDif.cb.done) begin
-					LCDif.cb.cmd <= tr.cmd[cmd_length];
+					LCDif.cb.cmd <= tr.cmd[cmd_idx];
 					LCDif.cb.cmd_valid <= 1;
-					cmd_length++;
+					cmd_idx++;
 				end
 				else LCDif.cb.cmd_valid <= 0;
 			end
@@ -155,7 +156,7 @@ package tb_component;
 
 	class Monitor;
 		LCDifTest LCDif;
-		Img img;
+		img_t img;
 		Monitor_cb cb;
 
 		function new(LCDifTest LCDif);
@@ -187,59 +188,53 @@ package tb_component;
 
 	class Scoreboard;
 		int nErrors, nExpects;
-		Img expected_img;
 		bit same;
-		bit diff_map[0:63];
-		Img recieved_img;
-		function new();
-			same = 1;
-		endfunction: new
+		bit[$clog2(`PIXEL_NUM)-1:0] diff_map[0:`PIXEL_NUM-1];
+		img_t expected_img;
+		img_t recieved_img;
 
-		function void save_expected(input Img generated_img, input bit [3:0] cmd[]);
-			// here to use referenced model implement by C++
-			LCD_CTRL_CPP(generated_img, cmd);
-			expected_img = generated_img;
+		function void save_expected(input img_t generated_img, input cmd_t cmd[]);
+			// here to use referenced model implemented by C
+          	LCD_CTRL_C(generated_img, cmd, expected_img);
 			nExpects++;
 		endfunction: save_expected
 
-		function void check_actual(input Img DUT_img);
+		function void check_actual(input img_t DUT_img);
 			recieved_img = DUT_img;
-			foreach(DUT_img[i]) begin
-				same &= (DUT_img[i] == expected_img[i]);
-				diff_map[i] = !((DUT_img[i] == expected_img[i]));
-			end
+			same = (DUT_img == expected_img);
+			foreach(DUT_img[i])	diff_map[i] = !((DUT_img[i] == expected_img[i]));
 			if(!same) nErrors++;
 		endfunction: check_actual
 
 		function void display();
-			if(same) $display("pass");
+			if(same) $display("Pass, identical to the referenced model.");
 			else begin
-				$display("Different pixel:");
+				$display("Different pixel, %2d different pixel:", diff_map.sum());
 				$write("position: ");
 				foreach(diff_map[i]) begin
-					if(diff_map[i]) $write("(%0d, %0d) ", i>>3,i[2:0]);
+					if(diff_map[i]) $write("(%0d, %0d) ", i>>$clog2(`IMG_WIDTH),i[$clog2(`IMG_WIDTH)-1:0]);
 				end
 				$display();
 				$display("Transaction result %0d (Expected/ Recieved):", nExpects);
 				$display("image: ");
-				for(int i=0;i<8;i++) begin
-					for(int j=0;j<8;j++) $write("(%3d / %3d) ", expected_img[i*8+j], recieved_img[i*8+j]);
-						$display();
+				for(int i=0;i<`IMG_WIDTH;i++) begin
+					for(int j=0;j<`IMG_WIDTH;j++) $write("(%3d / %3d) ", expected_img[i*`IMG_WIDTH+j], recieved_img[i*`IMG_WIDTH+j]);
+					$display();
 			end	
 			end
 		endfunction
 	endclass: Scoreboard;
 
 	class Driver_cb;
-		virtual task pre_transmit(input Driver drv, input Img img, input bit[3:0] cmd[]);
+		virtual task pre_transmit(input Driver drv, input img_t img, input cmd_t cmd[]);
 		endtask: pre_transmit
 		
-		virtual task post_transmit(input Driver drv, input Img img, input bit[3:0] cmd[]);
+		virtual task post_transmit(input Driver drv, input img_t img, input cmd_t cmd[]);
 		endtask: post_transmit
 	endclass: Driver_cb
 
 	class Monitor_cb;		
-		virtual task post_recieve(input Monitor mon, input Img img);
+		virtual task post_recieve(input Monitor mon, input img_t img);
 		endtask: post_recieve
 	endclass: Monitor_cb;
 
@@ -250,7 +245,7 @@ package tb_component;
 			this.scb = scb;
 		endfunction: new
 
-		virtual task post_transmit(input Driver drv, input Img img, input bit[3:0] cmd[]);
+		virtual task post_transmit(input Driver drv, input img_t img, input cmd_t cmd[]);
 			scb.save_expected(img, cmd);
 		endtask: post_transmit
 	endclass: Scb_Driver_cb
@@ -262,7 +257,7 @@ package tb_component;
 			this.scb = scb;
 		endfunction: new
 
-		virtual task post_recieve(input Monitor mon, input Img img);
+		virtual task post_recieve(input Monitor mon, input img_t img);
 			scb.check_actual(img);
 			scb.display();
 		endtask: post_recieve
@@ -270,7 +265,7 @@ package tb_component;
 
 	class Environment;
 		Generator gen;
-		mailbox gen2drv;
+		mailbox #(Transaction) gen2drv;
 		event drv2gen;
 		Driver drv;
 		Monitor mon;
@@ -316,7 +311,7 @@ package tb_component;
 			fork: timeout_block
 				wait (scb.nExpects == nImages);
 				begin: exceeded_time
-					repeat(1_000_000) @LCDif.cb;
+					repeat(`END_CYCLE) @LCDif.cb;
 					$display("@%0t: %m ERROR: Generator timeout", $time);
 				end
 			join_any
@@ -325,7 +320,8 @@ package tb_component;
 		endtask: run
 
 		virtual function void wrap_up();
-			$display("Simulation end");
+			$display("@%0t: Simulation end, %0d Trans generated, %0d Errors", $time, gen.nImages, scb.nErrors);
+			if(!scb.nErrors) $display("All pass!");
 		endfunction: wrap_up
 	endclass: Environment
 	

@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/User/Desktop/result
 vLCD_CTRL
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1707134358
+Z2 !s110 1708003172
 !i10b 1
 !s100 i3;g;mCIEDgiWzfbRKehc1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -21,13 +21,13 @@ R0
 Z5 w1706807248
 8LCD_CTRL.v
 Z6 FLCD_CTRL.v
-!i122 73
+!i122 77
 L0 2 191
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1707134358.000000
+Z8 !s108 1708003172.000000
 Z9 !s107 MMS_2num.v|MMS_4num.v|LCD_CTRL.v|tb_component.sv|test.sv|interface.sv|tb.svh|.\testbench.sv|
 Z10 !s90 .\testbench.sv|
 !i113 1
@@ -46,7 +46,7 @@ R0
 R5
 8interface.sv
 Z12 Finterface.sv
-!i122 73
+!i122 77
 L0 1 0
 R7
 r1
@@ -71,7 +71,7 @@ R0
 R5
 8MMS_2num.v
 Z13 FMMS_2num.v
-!i122 73
+!i122 77
 L0 1 26
 R7
 r1
@@ -96,7 +96,7 @@ R0
 R5
 8MMS_4num.v
 Z14 FMMS_4num.v
-!i122 73
+!i122 77
 L0 2 18
 R7
 r1
@@ -113,17 +113,17 @@ Z15 !s115 LCD_if
 R1
 R2
 !i10b 1
-!s100 kzRc3G=BS^<Xz^W]z0ZMz0
+!s100 mo2=7KC_L9AS`HjUWDzR]3
 R3
-IzzHA_S0e[f=oc@BXb7PQN3
-VzzHA_S0e[f=oc@BXb7PQN3
+I<SKz^7=<94jl4gjK:OHBW0
+V<SKz^7=<94jl4gjK:OHBW0
 S1
 R0
-w1707134355
+w1708003151
 8tb_component.sv
 Z16 Ftb_component.sv
-!i122 73
-L0 10 0
+!i122 77
+L0 11 0
 R7
 r1
 !s85 0
@@ -135,20 +135,20 @@ R10
 R11
 4test
 R1
-DXx4 work 12 tb_component 0 22 zzHA_S0e[f=oc@BXb7PQN3
+DXx4 work 12 tb_component 0 22 <SKz^7=<94jl4gjK:OHBW0
 R2
 !i10b 1
-!s100 d68`TIG>S4C0`J0TAdISm0
+!s100 oOg8YdfH=4GU>JaMg7X1a3
 R3
-ImA7UCJ<J9UhmT]WnP:9Co3
+I8dCe9?bA7MQF9BC@0K?hP2
 R4
 S1
 R0
-w1707133276
+w1707984125
 8test.sv
 Z17 Ftest.sv
-!i122 73
-L0 3 0
+!i122 77
+L0 2 0
 R7
 r1
 !s85 0
@@ -203,7 +203,7 @@ R0
 R5
 R18
 R19
-!i122 73
+!i122 77
 L0 3 36
 R7
 r1
