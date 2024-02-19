@@ -6,6 +6,7 @@
 `define PIXEL_NUM `IMG_WIDTH*`IMG_WIDTH
 `define CMD_LENGTH 4
 `include "interface.sv"
+`include "tb_component.sv"
 `include "test.sv"
 `include "LCD_CTRL.v"
 
