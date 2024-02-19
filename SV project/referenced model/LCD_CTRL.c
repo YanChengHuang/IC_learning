@@ -13,7 +13,6 @@ int min_max(int x, int y, int sel){
 }
 
 void image_operator(int* image_idx, svBitVecVal image[64], int cmd){
-		printf("%d, %d, %d",*image_idx, image[*image_idx], cmd);
 		int left_up, right_up, left_down, right_down, left_up_idx, right_up_idx, left_down_idx, right_down_idx;
 		
 		left_up_idx = *image_idx-9;
@@ -31,7 +30,7 @@ void image_operator(int* image_idx, svBitVecVal image[64], int cmd){
 				break;
 			// shift up
 			case 1:{
-				if(*image_idx <= 7) break;
+				if(*image_idx <= 15) break;
 				else{
 					(*image_idx) -= 8;
 					break;

@@ -35,18 +35,48 @@ package tb_component;
 		rand img_t image; // 8 bits 8*8 image with no constraint
 		rand cmd_t cmd []; // cmd array
 		
-		constraint c_cmd{
-          cmd.size() inside {[0:62]}; // The size of the cmd array should be larger than 0 and its size should not exceed 63.
+		constraint cmd_base_c{
+          	cmd.size() inside {[0:62]}; // The size of the cmd array should be larger than 0 and its size should not exceed 63.
 			foreach(cmd[i])
               	cmd[i] inside {[1:11]}; // Element in the cmd array should inside[1:11] 
 		}
-		
+
+		int consecutive_num;
+		rand bit[5:0] consecutive_head_idx;
+		rand bit[3:0] shift_cmd; 
+		// Create 7 shift command(cmd: 1~4) in a row, which guarantee DUT to trigger the image edge.
+		constraint cmd_edge_trigger{
+			cmd.size() >= (consecutive_num) + 1; 
+			consecutive_head_idx <= cmd.size() - consecutive_num - 1;
+			shift_cmd inside {[1:4]};
+			foreach(cmd[i])
+				if( i >= consecutive_head_idx)
+					if(i < consecutive_head_idx + consecutive_num) cmd[i] == shift_cmd; // gererate consecutive vertical cmd
+					else cmd[i] inside {[5:11]};
+		}
+
+		rand bit[3:0] vertical_shift_cmd;
+		rand bit[3:0] horizontal_shift_cmd;
+		// Create 7 vertical shift command(cmd: 1~2) and 7 horizontal shift command(cmd: 3~4) in a row, which guarantee DUT to trigger the image corner.
+		constraint cmd_corner_trigger{
+			cmd.size() >= (consecutive_num)*2 + 1;
+			consecutive_head_idx <= cmd.size() - ((consecutive_num)*2) - 1;
+			vertical_shift_cmd inside {[1:2]};
+			horizontal_shift_cmd inside {[3:4]};
+			foreach(cmd[i])
+              	if( i >= consecutive_head_idx)
+					if(i < consecutive_head_idx + consecutive_num) cmd[i] == vertical_shift_cmd; // gererate consecutive vertical cmd
+					else if(i < consecutive_head_idx + 2*consecutive_num) cmd[i] == horizontal_shift_cmd; // gererate consecutive horizontal cmd
+					else cmd[i] inside {[5:11]};
+		}
+
 		function void post_randomize;
           cmd = new[cmd.size()+1](cmd); // The last element of cmd array should be 0 (write)
 		endfunction
 
 		function new();
 			super.new();
+			consecutive_num = `IMG_WIDTH-1;
 		endfunction: new
 		
 		virtual function BaseTr copy(input BaseTr to=null);
@@ -88,7 +118,27 @@ package tb_component;
 
 		task run();
 			Transaction cp;
-			repeat(nImages) begin
+			// The testbench has three types of contraint to apply
+			int constraint_num=3;
+			
+			min_repeat_time: assert(nImages >= constraint_num)
+			else $fatal("Generated Image must at least 3 Images.");
+
+			for(int repeat_time=0;repeat_time<nImages;repeat_time++) begin
+				if(repeat_time < (nImages/constraint_num))begin
+					blueprint.constraint_mode(0);
+					blueprint.cmd_base_c.constraint_mode(1);
+					if(repeat_time == 0) $display("--- Regular constraint test start ---");
+				end	 
+				else if(repeat_time < 2*(nImages/constraint_num)) begin 
+					blueprint.cmd_edge_trigger.constraint_mode(1);
+					if(repeat_time == (nImages/constraint_num)) $display("--- Edge-detected constraint test start ---");
+				end
+				else begin
+					blueprint.cmd_edge_trigger.constraint_mode(0);
+					blueprint.cmd_corner_trigger.constraint_mode(1);
+					if(repeat_time == 2*(nImages/constraint_num)) $display("--- Corner-detected constraint test start ---");
+				end
 				`SV_RAND_CHECK(blueprint.randomize());
 				$cast(cp, blueprint.copy());
 				cp.display($sformatf("Time: %0t",$time));
