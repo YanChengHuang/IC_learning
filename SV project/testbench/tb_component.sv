@@ -121,7 +121,7 @@ package tb_component;
 			// The testbench has three types of contraint to apply
 			int constraint_num=3;
 			
-			min_repeat_time: assert(nImages >= 3)
+			min_repeat_time: assert(nImages >= constraint_num)
 			else $fatal("Generated Image must at least 3 Images.");
 
 			for(int repeat_time=0;repeat_time<nImages;repeat_time++) begin
