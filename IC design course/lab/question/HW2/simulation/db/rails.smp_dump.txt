@@ -1,8 +1,0 @@
-
-State Machine - |rails|state_reg
-Name state_reg.CAL state_reg.FETCH state_reg.IDLE state_reg.FETCH_FIRST state_reg.FINISH 
-state_reg.FETCH_FIRST 0 0 0 0 0 
-state_reg.IDLE 0 0 1 1 0 
-state_reg.FETCH 0 1 0 1 0 
-state_reg.CAL 1 0 0 1 0 
-state_reg.FINISH 0 0 0 1 1 

@@ -1,8 +1,0 @@
-
-State Machine - |AEC|CurrentState
-Name CurrentState.CALCULATION CurrentState.POPMULT CurrentState.POPSINGLE CurrentState.DATA_IN CurrentState.OUTPUT 
-CurrentState.DATA_IN 0 0 0 0 0 
-CurrentState.POPSINGLE 0 0 1 1 0 
-CurrentState.POPMULT 0 1 0 1 0 
-CurrentState.CALCULATION 1 0 0 1 0 
-CurrentState.OUTPUT 0 0 0 1 1 
