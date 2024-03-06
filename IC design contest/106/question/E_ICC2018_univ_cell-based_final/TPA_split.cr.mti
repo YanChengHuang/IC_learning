@@ -1,0 +1,23 @@
+{C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v} {1 {vlog -work TPA_split -stats=none {C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testfixture
+
+Top level modules:
+	testfixture
+
+} {} {}} {C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v} {0 {vlog -work TPA_split -stats=none {C:\Users\User\Desktop\IC self_learning\IC design contest\106\question\E_ICC2018_univ_cell-based_final\TPA.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TPA
+** Error: (vlog-13069) C:\Users\User\Desktop\IC self_learning\IC design contest\106\question\E_ICC2018_univ_cell-based_final\TPA.v(32): near "=": syntax error, unexpected '=', expecting ++ or --.
+
+} {4.0 5.0} {}} {C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v} {0 {vlog -work TPA_split -stats=none {C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TWS
+** Error: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v(28): (vlog-2730) Undefined variable: 'TWP_first'.
+** Error: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v(34): (vlog-2730) Undefined variable: 'IDLE'.
+** Error: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v(45): (vlog-2730) Undefined variable: 'TWP_wr'.
+** Error: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v(47): (vlog-2730) Undefined variable: 'state_RIM'.
+** Error: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v(59): (vlog-2730) Undefined variable: 'cfg_addr'.
+** Error: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TWS.v(59): (vlog-2730) Undefined variable: 'Register_Spaces'.
+
+} {4.0 10.0} {}}

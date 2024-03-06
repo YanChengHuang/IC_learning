@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at TPA.v(90): always construct contains both blocking and non-blocking assignments File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 90
+Warning (10268): Verilog HDL information at TPA.v(138): always construct contains both blocking and non-blocking assignments File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 138

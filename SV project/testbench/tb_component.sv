@@ -47,7 +47,7 @@ package tb_component;
 		// Create 7 shift command(cmd: 1~4) in a row, which guarantee DUT to trigger the image edge.
 		constraint cmd_edge_trigger{
 			cmd.size() >= (consecutive_num) + 1; 
-			consecutive_head_idx <= cmd.size() - consecutive_num - 1;
+			consecutive_head_idx <= (cmd.size()-1) - consecutive_num - 1;
 			shift_cmd inside {[1:4]};
 			foreach(cmd[i])
 				if( i >= consecutive_head_idx)
@@ -60,7 +60,7 @@ package tb_component;
 		// Create 7 vertical shift command(cmd: 1~2) and 7 horizontal shift command(cmd: 3~4) in a row, which guarantee DUT to trigger the image corner.
 		constraint cmd_corner_trigger{
 			cmd.size() >= (consecutive_num)*2 + 1;
-			consecutive_head_idx <= cmd.size() - ((consecutive_num)*2) - 1;
+			consecutive_head_idx <= (cmd.size()-1) - ((consecutive_num)*2) - 1;
 			vertical_shift_cmd inside {[1:2]};
 			horizontal_shift_cmd inside {[3:4]};
 			foreach(cmd[i])

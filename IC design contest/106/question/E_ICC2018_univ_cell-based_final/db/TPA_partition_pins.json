@@ -84,11 +84,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "cfg_addr[4]",
+					"name" : "cfg_addr[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cfg_addr[3]",
+					"name" : "cfg_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cfg_addr[4]",
 					"strict" : false
 				},
 				{
@@ -96,11 +100,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "cfg_addr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cfg_addr[0]",
+					"name" : "cfg_addr[3]",
 					"strict" : false
 				},
 				{

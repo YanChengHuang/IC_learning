@@ -197,7 +197,8 @@ $display(" Stage 6-2. Arbiter [ WRITE ] Test ..."); $display("  ");
 pass6_cnt = 0; err6_cnt = 0;
 for (i=255; i>=248; i=i-1) begin
 fork
-	tws_write(i, i);
+	$display("%t", $time);
+	tws_write(i, i); //address, data
 	cfg_write(i, 255-i);
 join
 end

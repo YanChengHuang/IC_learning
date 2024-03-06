@@ -1,0 +1,58 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vATCONV
+!s110 1709386718
+!i10b 1
+!s100 EJ1BkLQ<fEPO??]AegGWW0
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IbD^HRNRiJSH7Q4;]eJ46>1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file
+w1709386703
+8C:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/ATCONV_m.v
+FC:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/ATCONV_m.v
+!i122 3
+L0 2 171
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1709386718.000000
+!s107 C:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/ATCONV_m.v|
+!s90 -reportprogress|300|-work|final_version|-stats=none|C:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/ATCONV_m.v|
+!i113 1
+Z4 o-work final_version
+Z5 tCvgOpt 0
+n@a@t@c@o@n@v
+vtestfixture
+!s110 1709386369
+!i10b 1
+!s100 XRZ;UL8^K^Hz^_W`gg>Wi1
+R0
+Id<@SmYPk9_VDedk>_?Ig_2
+R1
+R2
+w1693282739
+8C:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/testfixture.v
+FC:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/testfixture.v
+!i122 2
+L0 8 173
+R3
+r1
+!s85 0
+31
+!s108 1709386369.000000
+!s107 C:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/testfixture.v|
+!s90 -reportprogress|300|-work|final_version|-stats=none|C:/Users/User/Desktop/IC self_learning/IC design course/lab/question/HW4/file/testfixture.v|
+!i113 1
+R4
+R5

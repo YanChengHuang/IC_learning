@@ -1,0 +1,9 @@
+
+State Machine - |ATCONV|state
+Name state.FINISH state.LAYER1_WRITECEILING state.MAXPOOING state.LAYER0_WRITERELU state.ATCONV_PADDING state.INIT 
+state.INIT 0 0 0 0 0 0 
+state.ATCONV_PADDING 0 0 0 0 1 1 
+state.LAYER0_WRITERELU 0 0 0 1 0 1 
+state.MAXPOOING 0 0 1 0 0 1 
+state.LAYER1_WRITECEILING 0 1 0 0 0 1 
+state.FINISH 1 0 0 0 0 1 

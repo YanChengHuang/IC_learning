@@ -1,0 +1,507 @@
+# Compile of testbench.v was successful.
+# Compile of TPA.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 19:49:19 on Mar 04,2024
+# Loading work.testfixture
+# Loading work.TPA
+add wave -position insertpoint sim:/testfixture/u_TPA/*
+run -all
+#  ----------------------------------------------------------------------
+# TEST START !!!
+#  ----------------------------------------------------------------------
+#   
+#  Stage 1. Register Interface Master [ WRITE ] Test ...
+#   
+#  Stage 1. Result Check ...
+#   
+#  Stage 1 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 2. Register Interface Master [ READ + WRITE ] Test ...
+#   
+#  Stage 2. Result Check ...
+#   
+#  Stage 2 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 3. Two-Wire Protocol Slaver [ WRITE ] Test ...
+#   
+#  Stage 3. Result Check ...
+#   
+#  Stage 3 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 4. Two-Wire Protocol Slaver [ READ + WRITE ] Test ...
+#   
+#  Stage 4. Result Check ...
+#   
+#  Stage 4 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 5. RIM and TWS concurrently [ READ + WRITE ] Test ...
+#   
+#  Stage 5. Result Check ...
+#   
+#  Stage 5 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 6. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-1. Arbiter [ WRITE ] Test ...
+#   
+#  Pattern 6-1 at address         255 Fail!, expected result is 0000, but the responsed result is 00ff
+#  Pattern 6-1 at address         254 Fail!, expected result is 0001, but the responsed result is 00fe
+#  Pattern 6-1 at address         253 Fail!, expected result is 0002, but the responsed result is 00fd
+#  Pattern 6-1 at address         252 Fail!, expected result is 0003, but the responsed result is 00fc
+#  Pattern 6-1 at address         251 Fail!, expected result is 0004, but the responsed result is 00fb
+#  Pattern 6-1 at address         250 Fail!, expected result is 0005, but the responsed result is 00fa
+#  Pattern 6-1 at address         249 Fail!, expected result is 0006, but the responsed result is 00f9
+#  Pattern 6-1 at address         248 Fail!, expected result is 0007, but the responsed result is 00f8
+#  Stage 6-1. FAIL!, There are           8 error data in register spaces
+#  Stage 6-2. Arbiter [ WRITE ] Test ...
+#   
+#           1126250000
+#           1128950100
+#           1131750100
+#           1134550100
+#           1137350100
+#           1140150100
+#           1142950100
+#           1145750100
+#  Pattern 6-2 at address         255 Fail!, expected result is 00ff, but the responsed result is 0000
+#  Pattern 6-2 at address         254 Fail!, expected result is 00fe, but the responsed result is 0001
+#  Pattern 6-2 at address         253 Fail!, expected result is 00fd, but the responsed result is 0002
+#  Pattern 6-2 at address         252 Fail!, expected result is 00fc, but the responsed result is 0003
+#  Pattern 6-2 at address         251 Fail!, expected result is 00fb, but the responsed result is 0004
+#  Pattern 6-2 at address         250 Fail!, expected result is 00fa, but the responsed result is 0005
+#  Pattern 6-2 at address         249 Fail!, expected result is 00f9, but the responsed result is 0006
+#  Pattern 6-2 at address         248 Fail!, expected result is 00f8, but the responsed result is 0007
+#  Stage 6-2. FAIL!, There are           8 error data in register spaces
+#  Stage 6-3. Arbiter [ WRITE ] Test ...
+#   
+#  Pattern 6-3 Fail!, expected result is 00000000, but the responsed result is 00ff
+#  Pattern 6-3 Fail!, expected result is 00000001, but the responsed result is 00fe
+#  Pattern 6-3 Fail!, expected result is 00000002, but the responsed result is 00fd
+#  Pattern 6-3 Fail!, expected result is 00000003, but the responsed result is 00fc
+#  Pattern 6-3 Fail!, expected result is 00000004, but the responsed result is 00fb
+#  Pattern 6-3 Fail!, expected result is 00000005, but the responsed result is 00fa
+#  Pattern 6-3 Fail!, expected result is 00000006, but the responsed result is 00f9
+#  Pattern 6-3 Fail!, expected result is 00000007, but the responsed result is 00f8
+#  Stage 6-3. FAIL!, There are           8 error data in register spaces
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v(250)
+#    Time: 11990500 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v line 250
+quit -sim
+# End time: 19:50:35 on Mar 04,2024, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 2
+# Compile of TPA.v was successful.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 19:50:46 on Mar 04,2024
+# Loading work.testfixture
+# Loading work.TPA
+add wave -position insertpoint sim:/testfixture/u_TPA/*
+run -all
+#  ----------------------------------------------------------------------
+# TEST START !!!
+#  ----------------------------------------------------------------------
+#   
+#  Stage 1. Register Interface Master [ WRITE ] Test ...
+#   
+#  Stage 1. Result Check ...
+#   
+#  Stage 1 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 2. Register Interface Master [ READ + WRITE ] Test ...
+#   
+#  Stage 2. Result Check ...
+#   
+#  Stage 2 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 3. Two-Wire Protocol Slaver [ WRITE ] Test ...
+#   
+#  Stage 3. Result Check ...
+#   
+#  Stage 3 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 4. Two-Wire Protocol Slaver [ READ + WRITE ] Test ...
+#   
+#  Stage 4. Result Check ...
+#   
+#  Stage 4 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 5. RIM and TWS concurrently [ READ + WRITE ] Test ...
+#   
+#  Stage 5. Result Check ...
+#   
+#  Pattern         128 at address         128 Fail!, expected result is ccd2, but the responsed result is 4287
+#  Pattern         129 at address         129 Fail!, expected result is ccd2, but the responsed result is 4287
+#  Pattern         130 at address         130 Fail!, expected result is e921, but the responsed result is 6e72
+#  Pattern         131 at address         131 Fail!, expected result is e921, but the responsed result is 6e72
+#  Pattern         132 at address         132 Fail!, expected result is 4389, but the responsed result is 2e8e
+#  Pattern         133 at address         133 Fail!, expected result is 4389, but the responsed result is 2e8e
+#  Pattern         134 at address         134 Fail!, expected result is 22d6, but the responsed result is 2543
+#  Pattern         135 at address         135 Fail!, expected result is 22d6, but the responsed result is 2543
+#  Pattern         136 at address         136 Fail!, expected result is 9468, but the responsed result is de8a
+#  Pattern         137 at address         137 Fail!, expected result is 9468, but the responsed result is de8a
+#  Pattern         138 at address         138 Fail!, expected result is 251c, but the responsed result is 8cc4
+#  Pattern         139 at address         139 Fail!, expected result is 251c, but the responsed result is 8cc4
+#  Pattern         140 at address         140 Fail!, expected result is 9f40, but the responsed result is da61
+#  Pattern         141 at address         141 Fail!, expected result is 9f40, but the responsed result is da61
+#  Pattern         142 at address         142 Fail!, expected result is 8365, but the responsed result is 59d9
+#  Pattern         143 at address         143 Fail!, expected result is 8365, but the responsed result is 59d9
+#  Pattern         144 at address         144 Fail!, expected result is 1373, but the responsed result is 66dd
+#  Pattern         145 at address         145 Fail!, expected result is 1373, but the responsed result is 66dd
+#  Pattern         146 at address         146 Fail!, expected result is 1f92, but the responsed result is 3d6c
+#  Pattern         147 at address         147 Fail!, expected result is 1f92, but the responsed result is 3d6c
+#  Pattern         148 at address         148 Fail!, expected result is 3d6e, but the responsed result is 2f15
+#  Pattern         149 at address         149 Fail!, expected result is 3d6e, but the responsed result is 2f15
+#  Pattern         150 at address         150 Fail!, expected result is 0cb7, but the responsed result is 6ad3
+#  Pattern         151 at address         151 Fail!, expected result is 0cb7, but the responsed result is 6ad3
+#  Pattern         152 at address         152 Fail!, expected result is f1de, but the responsed result is e719
+#  Pattern         153 at address         153 Fail!, expected result is f1de, but the responsed result is e719
+#  Pattern         154 at address         154 Fail!, expected result is 7d40, but the responsed result is 7daa
+#  Pattern         155 at address         155 Fail!, expected result is 7d40, but the responsed result is 7daa
+#  Pattern         156 at address         156 Fail!, expected result is e66a, but the responsed result is 5675
+#  Pattern         157 at address         157 Fail!, expected result is e66a, but the responsed result is 5675
+#  Pattern         158 at address         158 Fail!, expected result is 1c78, but the responsed result is 5e87
+#  Pattern         159 at address         159 Fail!, expected result is 1c78, but the responsed result is 5e87
+#  Pattern         160 at address         160 Fail!, expected result is 63c6, but the responsed result is c7bf
+#  Pattern         161 at address         161 Fail!, expected result is 63c6, but the responsed result is c7bf
+#  Pattern         162 at address         162 Fail!, expected result is 6767, but the responsed result is 3de0
+#  Pattern         163 at address         163 Fail!, expected result is 6767, but the responsed result is 3de0
+#  Pattern         164 at address         164 Fail!, expected result is 21ca, but the responsed result is 18b2
+#  Pattern         165 at address         165 Fail!, expected result is 21ca, but the responsed result is 18b2
+#  Pattern         166 at address         166 Fail!, expected result is f4c6, but the responsed result is f12b
+#  Pattern         167 at address         167 Fail!, expected result is f4c6, but the responsed result is f12b
+#  Pattern         168 at address         168 Fail!, expected result is 0f4e, but the responsed result is 9341
+#  Pattern         169 at address         169 Fail!, expected result is 0f4e, but the responsed result is 9341
+#  Pattern         170 at address         170 Fail!, expected result is 5a69, but the responsed result is 3c1b
+#  Pattern         171 at address         171 Fail!, expected result is 5a69, but the responsed result is 3c1b
+#  Pattern         172 at address         172 Fail!, expected result is 03f2, but the responsed result is d23a
+#  Pattern         173 at address         173 Fail!, expected result is 03f2, but the responsed result is d23a
+#  Pattern         174 at address         174 Fail!, expected result is 2b43, but the responsed result is 0b04
+#  Pattern         175 at address         175 Fail!, expected result is 2b43, but the responsed result is 0b04
+#  Pattern         176 at address         176 Fail!, expected result is bb53, but the responsed result is a62d
+#  Pattern         177 at address         177 Fail!, expected result is bb53, but the responsed result is a62d
+#  Pattern         178 at address         178 Fail!, expected result is 7370, but the responsed result is a5d3
+#  Pattern         179 at address         179 Fail!, expected result is 7370, but the responsed result is a5d3
+#  Pattern         180 at address         180 Fail!, expected result is 4bdc, but the responsed result is 8c09
+#  Pattern         181 at address         181 Fail!, expected result is 4bdc, but the responsed result is 8c09
+#  Pattern         182 at address         182 Fail!, expected result is 3060, but the responsed result is bea5
+#  Pattern         183 at address         183 Fail!, expected result is 3060, but the responsed result is bea5
+#  Pattern         184 at address         184 Fail!, expected result is 2efb, but the responsed result is afd1
+#  Pattern         185 at address         185 Fail!, expected result is 2efb, but the responsed result is afd1
+#  Pattern         186 at address         186 Fail!, expected result is a029, but the responsed result is 5e56
+#  Pattern         187 at address         187 Fail!, expected result is a029, but the responsed result is 5e56
+#  Pattern         188 at address         188 Fail!, expected result is 14c5, but the responsed result is c7bd
+#  Pattern         189 at address         189 Fail!, expected result is 14c5, but the responsed result is c7bd
+#  Pattern         190 at address         190 Fail!, expected result is c696, but the responsed result is eded
+#  Pattern         191 at address         191 Fail!, expected result is c696, but the responsed result is eded
+#  Stage 5 . FAIL!, There are          64 error data in register spaces
+#   
+#  ------------------------------------ 
+#  Stage 6. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-1. Arbiter [ WRITE ] Test ...
+#   
+#  Pattern 6-1 at address         255 Fail!, expected result is 0000, but the responsed result is 00ff
+#  Pattern 6-1 at address         254 Fail!, expected result is 0001, but the responsed result is 00fe
+#  Pattern 6-1 at address         253 Fail!, expected result is 0002, but the responsed result is 00fd
+#  Pattern 6-1 at address         252 Fail!, expected result is 0003, but the responsed result is 00fc
+#  Pattern 6-1 at address         251 Fail!, expected result is 0004, but the responsed result is 00fb
+#  Pattern 6-1 at address         250 Fail!, expected result is 0005, but the responsed result is 00fa
+#  Pattern 6-1 at address         249 Fail!, expected result is 0006, but the responsed result is 00f9
+#  Pattern 6-1 at address         248 Fail!, expected result is 0007, but the responsed result is 00f8
+#  Stage 6-1. FAIL!, There are           8 error data in register spaces
+#  Stage 6-2. Arbiter [ WRITE ] Test ...
+#   
+#           1126250000
+#           1128950100
+#           1131750100
+#           1134550100
+#           1137350100
+#           1140150100
+#           1142950100
+#           1145750100
+#  Stage 6-3. Arbiter [ WRITE ] Test ...
+#   
+#  Pattern 6-3 Fail!, expected result is 00000000, but the responsed result is 00ff
+#  Pattern 6-3 Fail!, expected result is 00000001, but the responsed result is 00fe
+#  Pattern 6-3 Fail!, expected result is 00000002, but the responsed result is 00fd
+#  Pattern 6-3 Fail!, expected result is 00000003, but the responsed result is 00fc
+#  Pattern 6-3 Fail!, expected result is 00000004, but the responsed result is 00fb
+#  Pattern 6-3 Fail!, expected result is 00000005, but the responsed result is 00fa
+#  Pattern 6-3 Fail!, expected result is 00000006, but the responsed result is 00f9
+#  Pattern 6-3 Fail!, expected result is 00000007, but the responsed result is 00f8
+#  Stage 6-3. FAIL!, There are           8 error data in register spaces
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v(250)
+#    Time: 11990500 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v line 250
+quit -sim
+# End time: 19:51:23 on Mar 04,2024, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 2
+# Compile of testbench.v was successful.
+# Compile of TPA.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 19:51:34 on Mar 04,2024
+# Loading work.testfixture
+# Loading work.TPA
+add wave -position insertpoint sim:/testfixture/u_TPA/*
+run -all
+#  ----------------------------------------------------------------------
+# TEST START !!!
+#  ----------------------------------------------------------------------
+#   
+#  Stage 1. Register Interface Master [ WRITE ] Test ...
+#   
+#  Stage 1. Result Check ...
+#   
+#  Stage 1 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 2. Register Interface Master [ READ + WRITE ] Test ...
+#   
+#  Stage 2. Result Check ...
+#   
+#  Stage 2 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 3. Two-Wire Protocol Slaver [ WRITE ] Test ...
+#   
+#  Stage 3. Result Check ...
+#   
+#  Stage 3 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 4. Two-Wire Protocol Slaver [ READ + WRITE ] Test ...
+#   
+#  Stage 4. Result Check ...
+#   
+#  Stage 4 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 5. RIM and TWS concurrently [ READ + WRITE ] Test ...
+#   
+#  Stage 5. Result Check ...
+#   
+#  Stage 5 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 6. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-1. Arbiter [ WRITE ] Test ...
+#   
+#  Pattern 6-1 at address         255 Fail!, expected result is 0000, but the responsed result is 00ff
+#  Pattern 6-1 at address         254 Fail!, expected result is 0001, but the responsed result is 00fe
+#  Pattern 6-1 at address         253 Fail!, expected result is 0002, but the responsed result is 00fd
+#  Pattern 6-1 at address         252 Fail!, expected result is 0003, but the responsed result is 00fc
+#  Pattern 6-1 at address         251 Fail!, expected result is 0004, but the responsed result is 00fb
+#  Pattern 6-1 at address         250 Fail!, expected result is 0005, but the responsed result is 00fa
+#  Pattern 6-1 at address         249 Fail!, expected result is 0006, but the responsed result is 00f9
+#  Pattern 6-1 at address         248 Fail!, expected result is 0007, but the responsed result is 00f8
+#  Stage 6-1. FAIL!, There are           8 error data in register spaces
+#  Stage 6-2. Arbiter [ WRITE ] Test ...
+#   
+#           1126250000
+#           1128950100
+#           1131750100
+#           1134550100
+#           1137350100
+#           1140150100
+#           1142950100
+#           1145750100
+#  Pattern 6-2 at address         255 Fail!, expected result is 00ff, but the responsed result is 0000
+#  Pattern 6-2 at address         254 Fail!, expected result is 00fe, but the responsed result is 0001
+#  Pattern 6-2 at address         253 Fail!, expected result is 00fd, but the responsed result is 0002
+#  Pattern 6-2 at address         252 Fail!, expected result is 00fc, but the responsed result is 0003
+#  Pattern 6-2 at address         251 Fail!, expected result is 00fb, but the responsed result is 0004
+#  Pattern 6-2 at address         250 Fail!, expected result is 00fa, but the responsed result is 0005
+#  Pattern 6-2 at address         249 Fail!, expected result is 00f9, but the responsed result is 0006
+#  Pattern 6-2 at address         248 Fail!, expected result is 00f8, but the responsed result is 0007
+#  Stage 6-2. FAIL!, There are           8 error data in register spaces
+#  Stage 6-3. Arbiter [ WRITE ] Test ...
+#   
+#  Pattern 6-3 Fail!, expected result is 00000000, but the responsed result is 00ff
+#  Pattern 6-3 Fail!, expected result is 00000001, but the responsed result is 00fe
+#  Pattern 6-3 Fail!, expected result is 00000002, but the responsed result is 00fd
+#  Pattern 6-3 Fail!, expected result is 00000003, but the responsed result is 00fc
+#  Pattern 6-3 Fail!, expected result is 00000004, but the responsed result is 00fb
+#  Pattern 6-3 Fail!, expected result is 00000005, but the responsed result is 00fa
+#  Pattern 6-3 Fail!, expected result is 00000006, but the responsed result is 00f9
+#  Pattern 6-3 Fail!, expected result is 00000007, but the responsed result is 00f8
+#  Stage 6-3. FAIL!, There are           8 error data in register spaces
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v(250)
+#    Time: 11990500 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v line 250
+quit -sim
+# End time: 20:00:23 on Mar 04,2024, Elapsed time: 0:08:49
+# Errors: 0, Warnings: 2
+# Compile of testbench.v was successful.
+# Compile of TPA.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 20:00:33 on Mar 04,2024
+# Loading work.testfixture
+# Loading work.TPA
+add wave -position insertpoint sim:/testfixture/u_TPA/*
+run -all
+#  ----------------------------------------------------------------------
+# TEST START !!!
+#  ----------------------------------------------------------------------
+#   
+#  Stage 1. Register Interface Master [ WRITE ] Test ...
+#   
+#  Stage 1. Result Check ...
+#   
+#  Stage 1 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 2. Register Interface Master [ READ + WRITE ] Test ...
+#   
+#  Stage 2. Result Check ...
+#   
+#  Stage 2 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 3. Two-Wire Protocol Slaver [ WRITE ] Test ...
+#   
+#  Stage 3. Result Check ...
+#   
+#  Stage 3 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 4. Two-Wire Protocol Slaver [ READ + WRITE ] Test ...
+#   
+#  Stage 4. Result Check ...
+#   
+#  Stage 4 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 5. RIM and TWS concurrently [ READ + WRITE ] Test ...
+#   
+#  Stage 5. Result Check ...
+#   
+#  Stage 5 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 6. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-1. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-2. Arbiter [ WRITE ] Test ...
+#   
+#           1126250000
+#           1128950100
+#           1131750100
+#           1134550100
+#           1137350100
+#           1140150100
+#           1142950100
+#           1145750100
+#  Stage 6-3. Arbiter [ WRITE ] Test ...
+#   
+# 
+# -----------------------------------------------------
+# 
+# Congratulations! All data have been generated successfully!
+# 
+# -------------------------PASS------------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v(250)
+#    Time: 11990500 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v line 250
+quit -sim
+# End time: 20:30:50 on Mar 04,2024, Elapsed time: 0:30:17
+# Errors: 0, Warnings: 2
+# Compile of testbench.v was successful.
+# Compile of TPA.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testfixture
+# vsim -gui work.testfixture 
+# Start time: 20:30:58 on Mar 04,2024
+# Loading work.testfixture
+# Loading work.TPA
+add wave -position insertpoint sim:/testfixture/u_TPA/*
+run -all
+#  ----------------------------------------------------------------------
+# TEST START !!!
+#  ----------------------------------------------------------------------
+#   
+#  Stage 1. Register Interface Master [ WRITE ] Test ...
+#   
+#  Stage 1. Result Check ...
+#   
+#  Stage 1 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 2. Register Interface Master [ READ + WRITE ] Test ...
+#   
+#  Stage 2. Result Check ...
+#   
+#  Stage 2 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 3. Two-Wire Protocol Slaver [ WRITE ] Test ...
+#   
+#  Stage 3. Result Check ...
+#   
+#  Stage 3 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 4. Two-Wire Protocol Slaver [ READ + WRITE ] Test ...
+#   
+#  Stage 4. Result Check ...
+#   
+#  Stage 4 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 5. RIM and TWS concurrently [ READ + WRITE ] Test ...
+#   
+#  Stage 5. Result Check ...
+#   
+#  Stage 5 . PASS!
+#   
+#  ------------------------------------ 
+#  Stage 6. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-1. Arbiter [ WRITE ] Test ...
+#   
+#  Stage 6-2. Arbiter [ WRITE ] Test ...
+#   
+#           1126250000
+#           1128950100
+#           1131750100
+#           1134550100
+#           1137350100
+#           1140150100
+#           1142950100
+#           1145750100
+#  Stage 6-3. Arbiter [ WRITE ] Test ...
+#   
+# 
+# -----------------------------------------------------
+# 
+# Congratulations! All data have been generated successfully!
+# 
+# -------------------------PASS------------------------
+# 
+# ** Note: $finish    : C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v(250)
+#    Time: 11990500 ns  Iteration: 0  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/testbench.v line 250
+# End time: 21:48:19 on Mar 04,2024, Elapsed time: 1:17:21
+# Errors: 0, Warnings: 2

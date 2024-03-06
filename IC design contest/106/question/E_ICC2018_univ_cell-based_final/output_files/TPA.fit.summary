@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Sep 11 12:21:10 2023
+Fitter Status : Successful - Sun Mar 03 22:44:33 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TPA
 Top-level Entity Name : TPA
 Family : Cyclone IV E
 Device : EP4CE55F23A7
 Timing Models : Final
-Total logic elements : 10,314 / 55,856 ( 18 % )
-    Total combinational functions : 10,309 / 55,856 ( 18 % )
+Total logic elements : 10,235 / 55,856 ( 18 % )
+    Total combinational functions : 10,234 / 55,856 ( 18 % )
     Dedicated logic registers : 4,160 / 55,856 ( 7 % )
 Total registers : 4160
 Total pins : 47 / 325 ( 14 % )

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TPA
-Mon Sep 11 12:17:37 2023
+Sun Mar 03 22:43:10 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -22,6 +22,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 11 12:17:36 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 03 22:43:10 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; TPA                                         ;
 ; Top-level Entity Name              ; TPA                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 10,309                                      ;
-;     Total combinational functions  ; 10,309                                      ;
+; Total logic elements               ; 10,235                                      ;
+;     Total combinational functions  ; 10,234                                      ;
 ;     Dedicated logic registers      ; 4,160                                       ;
 ; Total registers                    ; 4160                                        ;
 ; Total pins                         ; 47                                          ;
@@ -164,7 +165,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.3%      ;
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
 +----------------------------+-------------+
@@ -184,16 +185,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 10,309    ;
+; Estimated Total logic elements              ; 10,235    ;
 ;                                             ;           ;
-; Total combinational functions               ; 10309     ;
+; Total combinational functions               ; 10234     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 6639      ;
-;     -- 3 input functions                    ; 3614      ;
-;     -- <=2 input functions                  ; 56        ;
+;     -- 4 input functions                    ; 5825      ;
+;     -- 3 input functions                    ; 4384      ;
+;     -- <=2 input functions                  ; 25        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 10309     ;
+;     -- normal mode                          ; 10234     ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 4160      ;
@@ -206,8 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 4160      ;
-; Total fan-out                               ; 50081     ;
-; Average fan-out                             ; 3.44      ;
+; Total fan-out                               ; 53178     ;
+; Average fan-out                             ; 3.67      ;
 +---------------------------------------------+-----------+
 
 
@@ -216,40 +217,39 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |TPA                       ; 10309 (10309)       ; 4160 (4160)               ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |TPA                ; TPA         ; work         ;
+; |TPA                       ; 10234 (10234)       ; 4160 (4160)               ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |TPA                ; TPA         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |TPA|state_TWP                                                                                                                                                                                                                                        ;
-+---------------------------+---------------------+---------------------------+---------------------------+--------------------+--------------------------+------------------------+-------------------------+---------------------+-------------------+----------------+
-; Name                      ; state_TWP.TWP_write ; state_TWP.TWP_write_fetch ; state_TWP.TWP_read_finish ; state_TWP.TWP_read ; state_TWP.TWP_read_fetch ; state_TWP.TWP_read_set ; state_TWP.TWP_wait_read ; state_TWP.TWP_gaddr ; state_TWP.TWP_set ; state_TWP.IDLE ;
-+---------------------------+---------------------+---------------------------+---------------------------+--------------------+--------------------------+------------------------+-------------------------+---------------------+-------------------+----------------+
-; state_TWP.IDLE            ; 0                   ; 0                         ; 0                         ; 0                  ; 0                        ; 0                      ; 0                       ; 0                   ; 0                 ; 0              ;
-; state_TWP.TWP_set         ; 0                   ; 0                         ; 0                         ; 0                  ; 0                        ; 0                      ; 0                       ; 0                   ; 1                 ; 1              ;
-; state_TWP.TWP_gaddr       ; 0                   ; 0                         ; 0                         ; 0                  ; 0                        ; 0                      ; 0                       ; 1                   ; 0                 ; 1              ;
-; state_TWP.TWP_wait_read   ; 0                   ; 0                         ; 0                         ; 0                  ; 0                        ; 0                      ; 1                       ; 0                   ; 0                 ; 1              ;
-; state_TWP.TWP_read_set    ; 0                   ; 0                         ; 0                         ; 0                  ; 0                        ; 1                      ; 0                       ; 0                   ; 0                 ; 1              ;
-; state_TWP.TWP_read_fetch  ; 0                   ; 0                         ; 0                         ; 0                  ; 1                        ; 0                      ; 0                       ; 0                   ; 0                 ; 1              ;
-; state_TWP.TWP_read        ; 0                   ; 0                         ; 0                         ; 1                  ; 0                        ; 0                      ; 0                       ; 0                   ; 0                 ; 1              ;
-; state_TWP.TWP_read_finish ; 0                   ; 0                         ; 1                         ; 0                  ; 0                        ; 0                      ; 0                       ; 0                   ; 0                 ; 1              ;
-; state_TWP.TWP_write_fetch ; 0                   ; 1                         ; 0                         ; 0                  ; 0                        ; 0                      ; 0                       ; 0                   ; 0                 ; 1              ;
-; state_TWP.TWP_write       ; 1                   ; 0                         ; 0                         ; 0                  ; 0                        ; 0                      ; 0                       ; 0                   ; 0                 ; 1              ;
-+---------------------------+---------------------+---------------------------+---------------------------+--------------------+--------------------------+------------------------+-------------------------+---------------------+-------------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TPA|state_TWP                                                                                                                                                                                                                        ;
++---------------------------+--------------------------+---------------------------+-------------------------+--------------------------+------------------------+-------------------------+-----------------------+-------------------+----------------+
+; Name                      ; state_TWP.TWP_WRITE_DATA ; state_TWP.TWP_WRITE_FETCH ; state_TWP.TWP_SEND_READ ; state_TWP.TWP_SEND_START ; state_TWP.TWP_READ_SET ; state_TWP.TWP_WAIT_READ ; state_TWP.TWP_GETADDR ; state_TWP.TWP_SET ; state_TWP.IDLE ;
++---------------------------+--------------------------+---------------------------+-------------------------+--------------------------+------------------------+-------------------------+-----------------------+-------------------+----------------+
+; state_TWP.IDLE            ; 0                        ; 0                         ; 0                       ; 0                        ; 0                      ; 0                       ; 0                     ; 0                 ; 0              ;
+; state_TWP.TWP_SET         ; 0                        ; 0                         ; 0                       ; 0                        ; 0                      ; 0                       ; 0                     ; 1                 ; 1              ;
+; state_TWP.TWP_GETADDR     ; 0                        ; 0                         ; 0                       ; 0                        ; 0                      ; 0                       ; 1                     ; 0                 ; 1              ;
+; state_TWP.TWP_WAIT_READ   ; 0                        ; 0                         ; 0                       ; 0                        ; 0                      ; 1                       ; 0                     ; 0                 ; 1              ;
+; state_TWP.TWP_READ_SET    ; 0                        ; 0                         ; 0                       ; 0                        ; 1                      ; 0                       ; 0                     ; 0                 ; 1              ;
+; state_TWP.TWP_SEND_START  ; 0                        ; 0                         ; 0                       ; 1                        ; 0                      ; 0                       ; 0                     ; 0                 ; 1              ;
+; state_TWP.TWP_SEND_READ   ; 0                        ; 0                         ; 1                       ; 0                        ; 0                      ; 0                       ; 0                     ; 0                 ; 1              ;
+; state_TWP.TWP_WRITE_FETCH ; 0                        ; 1                         ; 0                       ; 0                        ; 0                      ; 0                       ; 0                     ; 0                 ; 1              ;
+; state_TWP.TWP_WRITE_DATA  ; 1                        ; 0                         ; 0                       ; 0                        ; 0                      ; 0                       ; 0                     ; 0                 ; 1              ;
++---------------------------+--------------------------+---------------------------+-------------------------+--------------------------+------------------------+-------------------------+-----------------------+-------------------+----------------+
 
 
 Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------+
 ; State Machine - |TPA|state_RIM                                                                      ;
 +---------------------+---------------------+--------------------+-------------------+----------------+
-; Name                ; state_RIM.RIM_write ; state_RIM.RIM_read ; state_RIM.RIM_set ; state_RIM.IDLE ;
+; Name                ; state_RIM.RIM_WRITE ; state_RIM.RIM_READ ; state_RIM.RIM_SET ; state_RIM.IDLE ;
 +---------------------+---------------------+--------------------+-------------------+----------------+
 ; state_RIM.IDLE      ; 0                   ; 0                  ; 0                 ; 0              ;
-; state_RIM.RIM_set   ; 0                   ; 0                  ; 1                 ; 1              ;
-; state_RIM.RIM_read  ; 0                   ; 1                  ; 0                 ; 1              ;
-; state_RIM.RIM_write ; 1                   ; 0                  ; 0                 ; 1              ;
+; state_RIM.RIM_SET   ; 0                   ; 0                  ; 1                 ; 1              ;
+; state_RIM.RIM_READ  ; 0                   ; 1                  ; 0                 ; 1              ;
+; state_RIM.RIM_WRITE ; 1                   ; 0                  ; 0                 ; 1              ;
 +---------------------+---------------------+--------------------+-------------------+----------------+
 
 
@@ -260,16 +260,15 @@ Encoding Type:  One-Hot
 +----------------------------------------+----------------------------------------+
 ; SDA_reg                                ; Stuck at VCC due to stuck port data_in ;
 ; SDA_reg~en                             ; Lost fanout                            ;
-; state_TWP.TWP_read_finish              ; Lost fanout                            ;
-; state_TWP~2                            ; Lost fanout                            ;
-; state_TWP~3                            ; Lost fanout                            ;
 ; state_TWP~4                            ; Lost fanout                            ;
 ; state_TWP~5                            ; Lost fanout                            ;
-; state_RIM~2                            ; Lost fanout                            ;
-; state_RIM~3                            ; Lost fanout                            ;
+; state_TWP~6                            ; Lost fanout                            ;
+; state_TWP~7                            ; Lost fanout                            ;
 ; state_RIM~4                            ; Lost fanout                            ;
 ; state_RIM~5                            ; Lost fanout                            ;
-; Total Number of Removed Registers = 11 ;                                        ;
+; state_RIM~6                            ; Lost fanout                            ;
+; state_RIM~7                            ; Lost fanout                            ;
+; Total Number of Removed Registers = 10 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -289,280 +288,22 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 4160  ;
-; Number of registers using Synchronous Clear  ; 4     ;
-; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 4112  ;
+; Number of registers using Asynchronous Clear ; 23    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4139  ;
+; Number of registers using Clock Enable       ; 43    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[0][0]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[1][7]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[2][6]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[3][13]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[4][12]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[5][10]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[6][14]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[7][10]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[8][4]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[9][6]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[10][14]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[11][11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[12][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[13][6]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[14][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[15][1]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[16][14]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[17][6]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[18][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[19][7]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[20][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[21][3]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[22][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[23][10]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[24][7]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[25][12]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[26][7]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[27][15]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[28][13]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[29][12]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[30][13]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[31][10]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[32][11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[33][1]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[34][4]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[35][1]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[36][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[37][3]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[38][3]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[39][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[40][15]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[41][13]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[42][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[43][7]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[44][6]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[45][8]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[46][14]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[47][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[48][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[49][3]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[50][1]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[51][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[52][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[53][14]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[54][10]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[55][12]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[56][8]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[57][6]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[58][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[59][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[60][4]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[61][15]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[62][3]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[63][3]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[64][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[65][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[66][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[67][1]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[68][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[69][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[70][11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[71][7]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[72][14]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[73][11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[74][12]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[75][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[76][12]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[77][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[78][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[79][5]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[80][4]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[81][13]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[82][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[83][8]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[84][6]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[85][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[86][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[87][11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[88][10]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[89][0]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[90][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[91][2]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[92][1]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[93][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[94][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[95][13]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[96][15]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[97][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[98][9]   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[99][14]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[100][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[101][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[102][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[103][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[104][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[105][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[106][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[107][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[108][15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[109][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[110][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[111][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[112][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[113][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[114][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[115][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[116][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[117][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[118][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[119][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[120][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[121][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[122][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[123][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[124][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[125][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[126][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[127][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[128][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[129][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[130][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[131][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[132][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[133][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[134][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[135][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[136][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[137][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[138][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[139][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[140][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[141][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[142][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[143][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[144][15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[145][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[146][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[147][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[148][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[149][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[150][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[151][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[152][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[153][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[154][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[155][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[156][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[157][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[158][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[159][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[160][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[161][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[162][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[163][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[164][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[165][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[166][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[167][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[168][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[169][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[170][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[171][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[172][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[173][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[174][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[175][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[176][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[177][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[178][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[179][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[180][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[181][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[182][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[183][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[184][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[185][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[186][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[187][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[188][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[189][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[190][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[191][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[192][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[193][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[194][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[195][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[196][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[197][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[198][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[199][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[200][15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[201][15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[202][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[203][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[204][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[205][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[206][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[207][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[208][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[209][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[210][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[211][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[212][13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[213][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[214][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[215][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[216][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[217][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[218][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[219][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[220][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[221][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[222][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[223][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[224][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[225][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[226][12] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[227][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[228][6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[229][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[230][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[231][3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[232][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[233][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[234][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[235][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[236][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[237][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[238][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[239][14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[240][11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[241][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[242][8]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[243][9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[244][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[245][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[246][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[247][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[248][15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[249][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[250][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[251][2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[252][5]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[253][1]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[254][7]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |TPA|Register_Spaces[255][7]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TPA|TWP_data_idx[2]          ;
-; 256:1              ; 16 bits   ; 2720 LEs      ; 2720 LEs             ; 0 LEs                  ; Yes        ; |TPA|cfg_rdata[13]~reg0       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TPA|state_RIM                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TPA|TWP_data_idx[3]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -572,21 +313,21 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; boundary_port         ; 47                          ;
 ; cycloneiii_ff         ; 4160                        ;
-;     CLR               ; 7                           ;
-;     ENA               ; 4120                        ;
+;     CLR               ; 20                          ;
+;     ENA               ; 24                          ;
 ;     ENA CLR           ; 3                           ;
 ;     ENA SLD           ; 16                          ;
-;     SCLR              ; 4                           ;
-;     plain             ; 10                          ;
+;     SLD               ; 4096                        ;
+;     plain             ; 1                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 10309                       ;
-;     normal            ; 10309                       ;
-;         2 data inputs ; 56                          ;
-;         3 data inputs ; 3614                        ;
-;         4 data inputs ; 6639                        ;
+; cycloneiii_lcell_comb ; 10234                       ;
+;     normal            ; 10234                       ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 4384                        ;
+;         4 data inputs ; 5825                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 6.07                        ;
+; Average LUT depth     ; 5.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -595,7 +336,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:29     ;
+; Top            ; 00:00:22     ;
 +----------------+--------------+
 
 
@@ -605,17 +346,18 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 11 12:16:50 2023
+    Info: Processing started: Sun Mar 03 22:42:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TPA -c TPA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tpa.v
     Info (12023): Found entity 1: TPA File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 1
 Info (12127): Elaborating entity "TPA" for the top level hierarchy
-Info (10264): Verilog HDL Case Statement information at TPA.v(67): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 67
-Info (10264): Verilog HDL Case Statement information at TPA.v(199): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 199
+Info (10264): Verilog HDL Case Statement information at TPA.v(151): all case item expressions in this case statement are onehot File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 151
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "SDA_reg~0" feeding internal logic into a wire File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 27
+    Warning (13049): Converted tri-state buffer "SDA_reg~0" feeding internal logic into a wire File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 30
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "Register_Spaces" is uninferred due to asynchronous read logic File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 19
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "SDA" and its non-tri-state driver. File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 8
 Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
@@ -623,20 +365,27 @@ Info (13060): One or more bidirectional pins are fed by always enabled tri-state
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "SDA~synth" File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/output_files/TPA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SCL" File: C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/TPA.v Line: 7
-Info (21057): Implemented 10356 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10282 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 29 input pins
     Info (21059): Implemented 17 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 10309 logic cells
+    Info (21061): Implemented 10235 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Mon Sep 11 12:17:37 2023
-    Info: Elapsed time: 00:00:47
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Mar 03 22:43:10 2024
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:44
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Desktop/IC self_learning/IC design contest/106/question/E_ICC2018_univ_cell-based_final/output_files/TPA.map.smsg.
 
 
